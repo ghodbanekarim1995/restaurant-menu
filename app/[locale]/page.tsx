@@ -7,12 +7,7 @@ import styles from './page.module.scss'
 type Locale = 'fr' | 'en' | 'ar'
 
 const languages = [
-  {
-    code: 'ar' as Locale,
-    name: 'العربية',
-    subName: 'Arabe',
-    flag: '/tunisia.webp',
-  },
+
   {
     code: 'fr' as Locale,
     name: 'Français',

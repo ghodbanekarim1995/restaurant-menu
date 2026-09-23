@@ -8,7 +8,7 @@ import { menuItems } from '@/data/menu'
 
 import styles from './page.module.scss'
 
-type Locale = 'fr' | 'en' | 'ar'
+type Locale = 'fr' | 'en'
 
 const translations = {
   fr: {
@@ -24,13 +24,6 @@ const translations = {
     order: 'Available at the restaurant',
     currency: 'DT',
   },
-
-  ar: {
-    back: 'العودة إلى القائمة',
-    description: 'الوصف',
-    order: 'متوفر في المطعم',
-    currency: 'د.ت',
-  },
 }
 
 export default function DishPage() {
@@ -38,7 +31,7 @@ export default function DishPage() {
 
   const locale: Locale =
     typeof params.locale === 'string' &&
-    ['fr', 'en', 'ar'].includes(params.locale)
+    ['fr', 'en'].includes(params.locale)
       ? (params.locale as Locale)
       : 'fr'
 
@@ -70,9 +63,8 @@ export default function DishPage() {
   return (
     <main
       className={styles.page}
-      dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      dir="ltr"
     >
-
       {/* =====================================
           BACK
       ===================================== */}
@@ -83,9 +75,7 @@ export default function DishPage() {
           href={`/${locale}/menu`}
           className={styles.backButton}
         >
-          <span>
-            {locale === 'ar' ? '→' : '←'}
-          </span>
+          <span>←</span>
 
           {t.back}
         </Link>
