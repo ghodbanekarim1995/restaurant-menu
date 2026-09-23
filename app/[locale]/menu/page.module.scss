@@ -1,0 +1,591 @@
+.page {
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #171717;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+  position: relative;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  padding: 18px 20px 22px;
+}
+
+.headerInner {
+  width: min(1100px, 100%);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.logoWrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.headerText {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.headerText > span {
+  color: #f15a24;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+.headerText h1 {
+  margin: 4px 0 2px;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  color: #171717;
+}
+
+.headerText p {
+  margin: 5px 0 0;
+
+  font-size: 14px;
+
+  color: #777;
+}
+
+/* ========================================
+   CATEGORY
+======================================== */
+
+.categorySection {
+  width: min(1100px, calc(100% - 30px));
+
+  margin: 25px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.categorySection::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryButton {
+  flex-shrink: 0;
+
+  border: 1px solid rgba(241, 90, 36, 0.20);
+
+  background: #fff8f2;
+
+  color: #555;
+
+  border-radius: 50px;
+
+  padding: 11px 20px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.categoryButton:hover {
+  transform: translateY(-2px);
+}
+
+.categoryButton.active {
+  background: #f15a24;
+
+  color: #ffffff;
+
+  border-color: #f15a24;
+}
+
+/* ========================================
+   MENU
+======================================== */
+
+.menuContainer {
+  width: min(1100px, calc(100% - 30px));
+
+  margin: 30px auto 0;
+}
+
+.menuGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* ========================================
+   DISH CARD
+======================================== */
+
+.dishCard {
+  display: block;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(0, 0, 0, 0.07);
+
+  border-radius: 24px;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.055);
+
+  opacity: 0;
+
+  animation: cardAppear 0.65s ease forwards;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.dishCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.11);
+}
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.imageWrapper {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: #f7f7f7;
+}
+
+.dishImage {
+  object-fit: cover;
+
+  transition:
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.dishCard:hover .dishImage {
+  transform: scale(1.07);
+}
+
+/* ========================================
+   IMAGE OVERLAY
+======================================== */
+
+.imageOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  padding: 18px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.62),
+      rgba(0, 0, 0, 0) 55%
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.dishCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.imageOverlay span {
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.arrow {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f15a24;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+/* ========================================
+   DISH CONTENT
+======================================== */
+
+.dishContent {
+  padding: 18px 18px 20px;
+}
+
+.dishTop {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.dishTop h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  color: #171717;
+}
+
+.price {
+  flex-shrink: 0;
+
+  color: #f15a24;
+
+  font-size: 17px;
+
+  font-weight: 900;
+}
+
+.dishContent p {
+  margin: 9px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  color: #777;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  width: min(1100px, calc(100% - 30px));
+
+  margin: 60px auto 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #999;
+}
+
+.footerLine {
+  width: 35px;
+  height: 1px;
+
+  background: #f15a24;
+}
+
+.footer span {
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.footer small {
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   RTL
+======================================== */
+
+[dir='rtl'] {
+  .headerText {
+    align-items: flex-start;
+  }
+
+  .dishTop {
+    direction: rtl;
+  }
+
+  .price {
+    direction: ltr;
+  }
+
+  .footer {
+    direction: ltr;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+  .header {
+    padding: 12px 14px 18px;
+  }
+
+  .headerInner {
+    flex-direction: column;
+
+    gap: 4px;
+
+    text-align: center;
+  }
+
+  .logo {
+    width: 145px;
+  }
+
+  .headerText {
+    align-items: center;
+  }
+
+  .headerText > span {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+  }
+
+  .headerText h1 {
+    margin-top: 5px;
+
+    font-size: 30px;
+  }
+
+  .headerText p {
+    margin-top: 6px;
+
+    font-size: 12px;
+  }
+
+  .categorySection {
+    width: calc(100% - 24px);
+
+    margin-top: 18px;
+  }
+
+  .categoryButton {
+    padding: 10px 17px;
+
+    font-size: 12px;
+  }
+
+  .menuContainer {
+    width: calc(100% - 24px);
+
+    margin-top: 22px;
+  }
+
+  .menuGrid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .dishCard {
+    border-radius: 20px;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 16 / 10;
+  }
+
+  .imageOverlay {
+    opacity: 1;
+
+    padding: 14px;
+  }
+
+  .imageOverlay span {
+    font-size: 11px;
+  }
+
+  .arrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 16px;
+  }
+
+  .dishContent {
+    padding: 15px 15px 17px;
+  }
+
+  .dishTop {
+    gap: 10px;
+  }
+
+  .dishTop h2 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .dishContent p {
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+  .footer {
+    margin-top: 40px;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+  .logo {
+    width: 125px;
+  }
+
+  .headerText h1 {
+    font-size: 27px;
+  }
+
+  .categorySection {
+    width: calc(100% - 20px);
+  }
+
+  .menuContainer {
+    width: calc(100% - 20px);
+  }
+
+  .dishTop h2 {
+    font-size: 17px;
+  }
+}

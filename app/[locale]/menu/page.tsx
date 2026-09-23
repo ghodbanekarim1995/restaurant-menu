@@ -1,61 +1,223 @@
 'use client'
 
+import Image from 'next/image'
+import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
-const content = {
+import { menuItems } from '@/data/menu'
+
+import styles from './page.module.scss'
+
+type Locale = 'fr' | 'en' | 'ar'
+
+const translations = {
   fr: {
-    title: 'Notre Menu',
-    text: 'Bienvenue chez Wok N Roll.',
+    menu: 'Notre menu',
+    subtitle: 'Découvrez nos spécialités asiatiques',
+    all: 'Tout',
+    starters: 'Entrées',
+    main: 'Plats',
+    viewDish: 'Voir le plat',
+    currency: 'DT',
   },
+
   en: {
-    title: 'Our Menu',
-    text: 'Welcome to Wok N Roll.',
+    menu: 'Our menu',
+    subtitle: 'Discover our Asian specialties',
+    all: 'All',
+    starters: 'Starters',
+    main: 'Main dishes',
+    viewDish: 'View dish',
+    currency: 'DT',
   },
+
   ar: {
-    title: 'قائمتنا',
-    text: 'مرحباً بكم في Wok N Roll.',
+    menu: 'قائمتنا',
+    subtitle: 'اكتشف أطباقنا الآسيوية',
+    all: 'الكل',
+    starters: 'المقبلات',
+    main: 'الأطباق الرئيسية',
+    viewDish: 'عرض الطبق',
+    currency: 'د.ت',
   },
 }
 
 export default function MenuPage() {
   const params = useParams()
 
-  const locale =
+  const locale: Locale =
     typeof params.locale === 'string' &&
-    ['ar', 'fr', 'en'].includes(params.locale)
-      ? params.locale
+    ['fr', 'en', 'ar'].includes(params.locale)
+      ? (params.locale as Locale)
       : 'fr'
 
-  const t = content[locale as keyof typeof content]
+  const t = translations[locale]
 
   return (
     <main
+      className={styles.page}
       dir={locale === 'ar' ? 'rtl' : 'ltr'}
-      style={{
-        minHeight: '100vh',
-        padding: '60px 20px',
-        textAlign: 'center',
-        background: '#fffaf3',
-      }}
     >
-      <h1
-        style={{
-          color: '#f15a24',
-          fontSize: '48px',
-          marginBottom: '20px',
-        }}
-      >
-        {t.title}
-      </h1>
+      {/* =====================================
+          HEADER
+      ===================================== */}
 
-      <p
-        style={{
-          fontSize: '20px',
-          color: '#555',
-        }}
-      >
-        {t.text}
-      </p>
+      <header className={styles.header}>
+
+        <div className={styles.headerInner}>
+
+          <Link
+            href={`/${locale}`}
+            className={styles.logoWrapper}
+          >
+            <Image
+              src="/wok-n-roll.png"
+              alt="Wok N Roll"
+              width={150}
+              height={120}
+              priority
+              className={styles.logo}
+            />
+          </Link>
+
+          <div className={styles.headerText}>
+            <span>WOK N ROLL</span>
+
+            <h1>
+              {t.menu}
+            </h1>
+
+            <p>
+              {t.subtitle}
+            </p>
+          </div>
+
+        </div>
+
+      </header>
+
+      {/* =====================================
+          CATEGORY FILTER
+      ===================================== */}
+
+      <section className={styles.categorySection}>
+
+        <button
+          type="button"
+          className={`${styles.categoryButton} ${styles.active}`}
+        >
+          {t.all}
+        </button>
+
+        <button
+          type="button"
+          className={styles.categoryButton}
+        >
+          {t.starters}
+        </button>
+
+        <button
+          type="button"
+          className={styles.categoryButton}
+        >
+          {t.main}
+        </button>
+
+      </section>
+
+      {/* =====================================
+          MENU
+      ===================================== */}
+
+      <section className={styles.menuContainer}>
+
+        <div className={styles.menuGrid}>
+
+          {menuItems.map((item, index) => (
+
+            <Link
+              key={item.id}
+              href={`/${locale}/menu/${item.id}`}
+              className={styles.dishCard}
+              style={{
+                animationDelay: `${index * 120}ms`,
+              }}
+            >
+
+              {/* IMAGE */}
+
+              <div className={styles.imageWrapper}>
+
+                <Image
+                  src={item.image}
+                  alt={item.name[locale]}
+                  fill
+                  sizes="(max-width: 650px) 100vw, 50vw"
+                  className={styles.dishImage}
+                />
+
+                <div className={styles.imageOverlay}>
+
+                  <span>
+                    {t.viewDish}
+                  </span>
+
+                  <div className={styles.arrow}>
+                    {locale === 'ar' ? '←' : '→'}
+                  </div>
+
+                </div>
+
+              </div>
+
+              {/* CONTENT */}
+
+              <div className={styles.dishContent}>
+
+                <div className={styles.dishTop}>
+
+                  <h2>
+                    {item.name[locale]}
+                  </h2>
+
+                  <span className={styles.price}>
+                    {item.price} {t.currency}
+                  </span>
+
+                </div>
+
+                <p>
+                  {item.description[locale]}
+                </p>
+
+              </div>
+
+            </Link>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* =====================================
+          FOOTER
+      ===================================== */}
+
+      <footer className={styles.footer}>
+
+        <div className={styles.footerLine} />
+
+        <span>
+          WOK N ROLL
+        </span>
+
+        <small>
+          ASIAN RESTAURANT
+        </small>
+
+      </footer>
+
     </main>
   )
 }
