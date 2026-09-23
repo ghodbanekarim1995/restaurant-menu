@@ -3,7 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import { useEffect, useRef, useState } from 'react'
+import {
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react'
 
 import { menuItems, type MenuCategory } from '@/data/menu'
 
@@ -57,7 +62,7 @@ function RevealCard({
   href,
   delay = 0,
 }: {
-  children: React.ReactNode
+  children: ReactNode
   className: string
   href: string
   delay?: number
@@ -113,6 +118,53 @@ function RevealCard({
 }
 
 /* =====================================
+   DISH IMAGE
+===================================== */
+
+function DishImage({
+  src,
+  alt,
+  placeholderText,
+}: {
+  src?: string
+  alt: string
+  placeholderText: string
+}) {
+  const [imageError, setImageError] = useState(
+    !src || src.trim().length === 0
+  )
+
+  if (imageError) {
+    return (
+      <div className={styles.imagePlaceholder}>
+        <Image
+          src="/wok-n-roll.png"
+          alt="Wok N Roll"
+          width={130}
+          height={100}
+          className={styles.placeholderLogo}
+        />
+
+        <span>
+          {placeholderText}
+        </span>
+      </div>
+    )
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      sizes="(max-width: 650px) 100vw, 50vw"
+      className={styles.dishImage}
+      onError={() => setImageError(true)}
+    />
+  )
+}
+
+/* =====================================
    MENU PAGE
 ===================================== */
 
@@ -127,9 +179,9 @@ export default function MenuPage() {
 
   const t = translations[locale]
 
-  // =====================================
-  // CATEGORY FILTER
-  // =====================================
+  /* =====================================
+     CATEGORY FILTER
+  ===================================== */
 
   const [activeCategory, setActiveCategory] = useState<
     'all' | MenuCategory
@@ -152,7 +204,6 @@ export default function MenuPage() {
       ===================================== */}
 
       <header className={styles.header}>
-
         <div className={styles.headerInner}>
 
           <Link
@@ -186,7 +237,6 @@ export default function MenuPage() {
           </div>
 
         </div>
-
       </header>
 
       {/* =====================================
@@ -194,8 +244,6 @@ export default function MenuPage() {
       ===================================== */}
 
       <section className={styles.categorySection}>
-
-        {/* ALL */}
 
         <button
           type="button"
@@ -209,8 +257,6 @@ export default function MenuPage() {
           {t.all}
         </button>
 
-        {/* STARTERS */}
-
         <button
           type="button"
           className={`${styles.categoryButton} ${
@@ -222,8 +268,6 @@ export default function MenuPage() {
         >
           {t.starters}
         </button>
-
-        {/* SOUPS */}
 
         <button
           type="button"
@@ -237,8 +281,6 @@ export default function MenuPage() {
           {t.soups}
         </button>
 
-        {/* SKEWERS */}
-
         <button
           type="button"
           className={`${styles.categoryButton} ${
@@ -250,8 +292,6 @@ export default function MenuPage() {
         >
           {t.skewers}
         </button>
-
-        {/* SALADS */}
 
         <button
           type="button"
@@ -265,8 +305,6 @@ export default function MenuPage() {
           {t.salads}
         </button>
 
-        {/* NOODLES */}
-
         <button
           type="button"
           className={`${styles.categoryButton} ${
@@ -278,8 +316,6 @@ export default function MenuPage() {
         >
           {t.noodles}
         </button>
-
-        {/* FRIED RICE */}
 
         <button
           type="button"
@@ -293,8 +329,6 @@ export default function MenuPage() {
           {t.friedRice}
         </button>
 
-        {/* WOK */}
-
         <button
           type="button"
           className={`${styles.categoryButton} ${
@@ -306,8 +340,6 @@ export default function MenuPage() {
         >
           {t.wok}
         </button>
-
-        {/* SUSHI */}
 
         <button
           type="button"
@@ -331,101 +363,70 @@ export default function MenuPage() {
 
         <div className={styles.menuGrid}>
 
-          {filteredItems.map((item, index) => {
+          {filteredItems.map((item, index) => (
+            <RevealCard
+              key={item.id}
+              href={`/${locale}/menu/${item.id}`}
+              className={styles.dishCard}
+              delay={index * 70}
+            >
 
-            const hasImage =
-              typeof item.image === 'string' &&
-              item.image.trim().length > 0
+              {/* =================================
+                  IMAGE
+              ================================= */}
 
-            return (
-              <RevealCard
-                key={item.id}
-                href={`/${locale}/menu/${item.id}`}
-                className={styles.dishCard}
-                delay={index * 70}
-              >
+              <div className={styles.imageWrapper}>
 
-                {/* =================================
-                    IMAGE
-                ================================= */}
+                <DishImage
+                  src={item.image}
+                  alt={item.name[locale]}
+                  placeholderText={t.imageComingSoon}
+                />
 
-                <div className={styles.imageWrapper}>
+                {/* OVERLAY */}
 
-                  {hasImage ? (
-                    <Image
-                      src={item.image}
-                      alt={item.name[locale]}
-                      fill
-                      sizes="(max-width: 650px) 100vw, 50vw"
-                      className={styles.dishImage}
-                    />
-                  ) : (
-                    <div
-                      className={
-                        styles.imagePlaceholder
-                      }
-                    >
-                      <Image
-                        src="/wok-n-roll.png"
-                        alt="Wok N Roll"
-                        width={130}
-                        height={100}
-                        className={
-                          styles.placeholderLogo
-                        }
-                      />
+                <div className={styles.imageOverlay}>
 
-                      <span>
-                        {t.imageComingSoon}
-                      </span>
-                    </div>
-                  )}
+                  <span>
+                    {t.viewDish}
+                  </span>
 
-                  {/* OVERLAY */}
-
-                  <div className={styles.imageOverlay}>
-
-                    <span>
-                      {t.viewDish}
-                    </span>
-
-                    <div className={styles.arrow}>
-                      →
-                    </div>
-
+                  <div className={styles.arrow}>
+                    →
                   </div>
 
                 </div>
 
-                {/* =================================
-                    CONTENT
-                ================================= */}
+              </div>
 
-                <div className={styles.dishContent}>
+              {/* =================================
+                  CONTENT
+              ================================= */}
 
-                  <div className={styles.dishTop}>
+              <div className={styles.dishContent}>
 
-                    <h2>
-                      {item.name[locale]}
-                    </h2>
+                <div className={styles.dishTop}>
 
-                    <span
-                      className={styles.price}
-                    >
-                      {item.price} {t.currency}
-                    </span>
+                  <h2>
+                    {item.name[locale]}
+                  </h2>
 
-                  </div>
-
-                  <p>
-                    {item.description[locale]}
-                  </p>
+                  <span
+                    className={styles.price}
+                  >
+                    {item.price} {t.currency}
+                  </span>
 
                 </div>
 
-              </RevealCard>
-            )
-          })}
+                <p>
+                  {item.description[locale]}
+                </p>
+
+              </div>
+
+            </RevealCard>
+          ))}
 
         </div>
 
