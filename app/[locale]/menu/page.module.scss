@@ -115,6 +115,8 @@
   overflow-x: auto;
 
   scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .categorySection::-webkit-scrollbar {
@@ -124,7 +126,7 @@
 .categoryButton {
   flex-shrink: 0;
 
-  border: 1px solid rgba(241, 90, 36, 0.20);
+  border: 1px solid rgba(241, 90, 36, 0.2);
 
   background: #fff8f2;
 
@@ -145,11 +147,16 @@
   transition:
     background 0.25s ease,
     color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .categoryButton:hover {
   transform: translateY(-2px);
+}
+
+.categoryButton:active {
+  transform: scale(0.96);
 }
 
 .categoryButton.active {
@@ -158,6 +165,9 @@
   color: #ffffff;
 
   border-color: #f15a24;
+
+  box-shadow:
+    0 6px 16px rgba(241, 90, 36, 0.22);
 }
 
 /* ========================================
@@ -200,17 +210,51 @@
   box-shadow:
     0 8px 30px rgba(0, 0, 0, 0.055);
 
+  /*
+    Initial state for scroll reveal
+  */
+
   opacity: 0;
 
-  animation: cardAppear 0.65s ease forwards;
+  transform:
+    translate3d(0, 45px, 0)
+    scale(0.97);
+
+  /*
+    Animation is triggered by the class
+    added when the card enters the viewport
+  */
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
+/* ========================================
+   CARD VISIBLE
+======================================== */
+
+.dishCard.visible {
+  opacity: 1;
+
+  transform:
+    translate3d(0, 0, 0)
+    scale(1);
+
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+/* ========================================
+   DESKTOP HOVER
+======================================== */
+
 .dishCard:hover {
-  transform: translateY(-6px);
+  transform:
+    translate3d(0, -6px, 0)
+    scale(1.005);
 
   box-shadow:
     0 20px 45px rgba(0, 0, 0, 0.11);
@@ -244,6 +288,55 @@
 }
 
 /* ========================================
+   IMAGE PLACEHOLDER
+======================================== */
+
+.imagePlaceholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff8f2 0%,
+      #ffffff 55%,
+      #f7f7f7 100%
+    );
+}
+
+.placeholderLogo {
+  width: 110px;
+  height: auto;
+
+  object-fit: contain;
+
+  opacity: 0.65;
+}
+
+.imagePlaceholder span {
+  color: #999;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-align: center;
+}
+
+/* ========================================
    IMAGE OVERLAY
 ======================================== */
 
@@ -269,7 +362,8 @@
 
   opacity: 0;
 
-  transition: opacity 0.3s ease;
+  transition:
+    opacity 0.3s ease;
 }
 
 .dishCard:hover .imageOverlay {
@@ -300,6 +394,14 @@
   color: #ffffff;
 
   font-size: 18px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.dishCard:hover .arrow {
+  transform: translateX(3px);
 }
 
 /* ========================================
@@ -402,24 +504,6 @@
 }
 
 /* ========================================
-   ANIMATION
-======================================== */
-
-@keyframes cardAppear {
-  from {
-    opacity: 0;
-
-    transform: translateY(25px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform: translateY(0);
-  }
-}
-
-/* ========================================
    RTL
 ======================================== */
 
@@ -508,8 +592,46 @@
     gap: 16px;
   }
 
+  /* ======================================
+     MOBILE SCROLL REVEAL
+  ====================================== */
+
   .dishCard {
     border-radius: 20px;
+
+    opacity: 0;
+
+    transform:
+      translate3d(0, 35px, 0)
+      scale(0.975);
+
+    transition:
+      opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.3s ease;
+  }
+
+  .dishCard.visible {
+    opacity: 1;
+
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  /*
+    On mobile there is no real hover.
+    Keep the image stable until the card
+    is actually touched.
+  */
+
+  .dishCard:hover {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.055);
   }
 
   .imageWrapper {
@@ -587,5 +709,27 @@
 
   .dishTop h2 {
     font-size: 17px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .dishCard,
+  .dishCard.visible,
+  .dishImage,
+  .categoryButton,
+  .arrow {
+    transition: none !important;
+
+    animation: none !important;
+
+    transform: none !important;
+  }
+
+  .dishCard {
+    opacity: 1;
   }
 }

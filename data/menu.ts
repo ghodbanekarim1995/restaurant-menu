@@ -33,7 +33,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'nems-poulet',
     category: 'starters',
-    image: '/nems.jpg',
+    image: '/nemspoulet.jpg',
     price: 9.5,
 
     name: {
@@ -50,7 +50,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'nems-crevettes',
     category: 'starters',
-    image: '/nems.jpg',
+    image: '/nemscrevettes.jpg',
     price: 11,
 
     name: {
@@ -84,7 +84,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'spring-rolls-poulet',
     category: 'starters',
-    image: '/spring-rolls.jpg',
+    image: '/spring-rollspoulet.jpg',
     price: 10,
 
     name: {
@@ -101,7 +101,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 'spring-rolls-crevettes',
     category: 'starters',
-    image: '/spring-rolls.jpg',
+    image: '/spring-rollscrevette.jpg',
     price: 11.5,
 
     name: {
