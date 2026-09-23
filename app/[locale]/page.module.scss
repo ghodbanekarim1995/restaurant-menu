@@ -898,20 +898,21 @@
 }
 
 @media (max-width: 650px) {
-  .page,
-  .container,
-  .languageCard,
-  .languages,
-  .experience {
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-  .languageCard {
-    position: relative;
-    left: auto;
-    right: auto;
-  }
+    .page,
+    .container,
+    .languageCard,
+    .languages,
+    .experience {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .languageCard {
+        position: relative;
+        left: auto;
+        right: auto;
+    }
 }
 
 /* ========================================
@@ -948,7 +949,7 @@
     .languageButton {
         min-height: 92px;
 
-        grid-template-columns: 58px 1fr 38px;
+        grid-template-columns: 58px minmax(0, 1fr) 38px;
 
         padding: 10px 12px;
     }
@@ -963,11 +964,17 @@
         height: 43px;
     }
 
+    .languageContent {
+        padding: 0 8px;
+    }
+
     .languageContent strong {
         font-size: 16px;
     }
 
     .languageContent span {
+        margin-top: 4px;
+
         font-size: 8px;
     }
 
