@@ -1,15 +1,15 @@
 .page {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 
-  background: #ffffff;
-  color: #171717;
+    background: #ffffff;
+    color: #171717;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 }
 
 /* ========================================
@@ -17,13 +17,13 @@
 ======================================== */
 
 .container {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto;
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
 
-  padding: 35px 0 25px;
+    padding: 35px 0 25px;
 }
 
 /* ========================================
@@ -31,65 +31,61 @@
 ======================================== */
 
 .orangeBrush {
-  position: absolute;
+    position: absolute;
 
-  top: 0;
-  right: 0;
+    top: 0;
+    right: 0;
 
-  width: 310px;
-  height: 90px;
+    width: 310px;
+    height: 90px;
 
-  background: #f15a24;
+    background: #f15a24;
 
-  clip-path: polygon(
-    25% 0,
-    100% 0,
-    100% 100%,
-    84% 84%,
-    68% 100%,
-    49% 76%,
-    30% 92%,
-    0 62%
-  );
+    clip-path: polygon(25% 0,
+            100% 0,
+            100% 100%,
+            84% 84%,
+            68% 100%,
+            49% 76%,
+            30% 92%,
+            0 62%);
 
-  opacity: 0.95;
+    opacity: 0.95;
 }
 
 .wavePatternLeft,
 .wavePatternRight {
-  position: absolute;
+    position: absolute;
 
-  width: 210px;
-  height: 210px;
+    width: 210px;
+    height: 210px;
 
-  opacity: 0.07;
+    opacity: 0.07;
 
-  background-image:
-    radial-gradient(
-      ellipse at center,
-      transparent 45%,
-      #f15a24 46%,
-      #f15a24 50%,
-      transparent 51%
-    );
+    background-image:
+        radial-gradient(ellipse at center,
+            transparent 45%,
+            #f15a24 46%,
+            #f15a24 50%,
+            transparent 51%);
 
-  background-size: 65px 48px;
+    background-size: 65px 48px;
 
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .wavePatternLeft {
-  left: -80px;
-  top: 160px;
+    left: -80px;
+    top: 160px;
 
-  transform: rotate(-20deg);
+    transform: rotate(-20deg);
 }
 
 .wavePatternRight {
-  right: -100px;
-  bottom: 120px;
+    right: -100px;
+    bottom: 120px;
 
-  transform: rotate(20deg);
+    transform: rotate(20deg);
 }
 
 /* ========================================
@@ -97,20 +93,20 @@
 ======================================== */
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .logo {
-  display: block;
+    display: block;
 
-  width: 300px;
-  height: auto;
+    width: 300px;
+    height: auto;
 
-  object-fit: contain;
+    object-fit: contain;
 }
 
 /* ========================================
@@ -118,30 +114,28 @@
 ======================================== */
 
 .languageCard {
-  position: relative;
+    position: relative;
 
-  width: min(900px, 100%);
+    width: min(900px, 100%);
 
-  margin: 20px auto 0;
+    margin: 20px auto 0;
 
-  padding: 42px 48px 48px;
+    padding: 42px 48px 48px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #fffaf3 0%,
-      #fff4e8 100%
-    );
+    background:
+        linear-gradient(145deg,
+            #fffaf3 0%,
+            #fff4e8 100%);
 
-  border: 1px solid rgba(241, 90, 36, 0.20);
+    border: 1px solid rgba(241, 90, 36, 0.20);
 
-  border-radius: 30px;
+    border-radius: 30px;
 
-  box-shadow:
-    0 25px 70px rgba(37, 24, 15, 0.09),
-    0 5px 20px rgba(241, 90, 36, 0.05);
+    box-shadow:
+        0 25px 70px rgba(37, 24, 15, 0.09),
+        0 5px 20px rgba(241, 90, 36, 0.05);
 
-  text-align: center;
+    text-align: center;
 }
 
 /* ========================================
@@ -149,34 +143,34 @@
 ======================================== */
 
 .cardDecoration {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  gap: 5px;
+    gap: 5px;
 
-  margin-bottom: 13px;
+    margin-bottom: 13px;
 }
 
 .cardDecoration span {
-  display: block;
+    display: block;
 
-  width: 12px;
-  height: 5px;
+    width: 12px;
+    height: 5px;
 
-  background: #f15a24;
+    background: #f15a24;
 
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 .cardDecoration span:first-child {
-  width: 42px;
+    width: 42px;
 
-  transform: rotate(-4deg);
+    transform: rotate(-4deg);
 }
 
 .cardDecoration span:last-child {
-  width: 7px;
+    width: 7px;
 }
 
 /* ========================================
@@ -184,14 +178,14 @@
 ======================================== */
 
 .cardBrand {
-  margin-bottom: 13px;
+    margin-bottom: 13px;
 
-  font-size: 11px;
-  font-weight: 800;
+    font-size: 11px;
+    font-weight: 800;
 
-  letter-spacing: 6px;
+    letter-spacing: 6px;
 
-  color: #555;
+    color: #555;
 }
 
 /* ========================================
@@ -199,19 +193,19 @@
 ======================================== */
 
 .title {
-  margin: 0;
+    margin: 0;
 
-  font-size: clamp(42px, 5vw, 65px);
+    font-size: clamp(42px, 5vw, 65px);
 
-  line-height: 1.05;
+    line-height: 1.05;
 
-  font-weight: 900;
+    font-weight: 900;
 
-  color: #242424;
+    color: #242424;
 }
 
 .title span {
-  color: #f15a24;
+    color: #f15a24;
 }
 
 /* ========================================
@@ -219,14 +213,14 @@
 ======================================== */
 
 .description {
-  max-width: 650px;
+    max-width: 650px;
 
-  margin: 20px auto 32px;
+    margin: 20px auto 32px;
 
-  font-size: 16px;
-  line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.7;
 
-  color: #666;
+    color: #666;
 }
 
 /* ========================================
@@ -234,11 +228,11 @@
 ======================================== */
 
 .languages {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-  gap: 18px;
+    gap: 18px;
 }
 
 /* ========================================
@@ -246,53 +240,53 @@
 ======================================== */
 
 .languageButton {
-  position: relative;
+    position: relative;
 
-  min-height: 205px;
+    min-height: 205px;
 
-  padding: 25px 18px;
+    padding: 25px 18px;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  background: #ffffff;
+    background: #ffffff;
 
-  border: 1px solid rgba(241, 90, 36, 0.17);
+    border: 1px solid rgba(241, 90, 36, 0.17);
 
-  border-radius: 22px;
+    border-radius: 22px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  font-family: inherit;
+    font-family: inherit;
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
 
 .languageButton:hover {
-  transform: translateY(-7px);
+    transform: translateY(-7px);
 
-  border-color: #f15a24;
+    border-color: #f15a24;
 
-  background: #fffdfb;
+    background: #fffdfb;
 
-  box-shadow:
-    0 18px 35px rgba(241, 90, 36, 0.14);
+    box-shadow:
+        0 18px 35px rgba(241, 90, 36, 0.14);
 }
 
 .languageButton:active {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .languageButton:focus-visible {
-  outline: 3px solid rgba(241, 90, 36, 0.25);
-  outline-offset: 3px;
+    outline: 3px solid rgba(241, 90, 36, 0.25);
+    outline-offset: 3px;
 }
 
 /* ========================================
@@ -300,34 +294,34 @@
 ======================================== */
 
 .flagContainer {
-  width: 70px;
-  height: 70px;
+    width: 70px;
+    height: 70px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  background: #ffffff;
+    background: #ffffff;
 
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.10);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.10);
 
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .flagImage {
-  width: 58px;
-  height: 58px;
+    width: 58px;
+    height: 58px;
 
-  display: block;
+    display: block;
 
-  object-fit: cover;
+    object-fit: cover;
 
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 /* ========================================
@@ -335,30 +329,30 @@
 ======================================== */
 
 .languageContent {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  align-items: center;
+    align-items: center;
 }
 
 .languageContent strong {
-  font-size: 20px;
+    font-size: 20px;
 
-  font-weight: 800;
+    font-weight: 800;
 
-  color: #171717;
+    color: #171717;
 }
 
 .languageContent span {
-  margin-top: 5px;
+    margin-top: 5px;
 
-  font-size: 10px;
+    font-size: 10px;
 
-  letter-spacing: 2px;
+    letter-spacing: 2px;
 
-  color: #888;
+    color: #888;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 /* ========================================
@@ -366,33 +360,33 @@
 ======================================== */
 
 .arrow {
-  width: 38px;
-  height: 38px;
+    width: 38px;
+    height: 38px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  margin-top: 14px;
+    margin-top: 14px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  background: #f15a24;
+    background: #f15a24;
 
-  color: #ffffff;
+    color: #ffffff;
 
-  font-size: 20px;
-  font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
 
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
 }
 
 .languageButton:hover .arrow {
-  transform: translateX(3px);
+    transform: translateX(3px);
 
-  background: #e84e18;
+    background: #e84e18;
 }
 
 /* ========================================
@@ -400,45 +394,45 @@
 ======================================== */
 
 .experience {
-  width: min(920px, 100%);
+    width: min(920px, 100%);
 
-  margin: 42px auto 0;
+    margin: 42px auto 0;
 
-  text-align: center;
+    text-align: center;
 }
 
 .experienceHeader {
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  gap: 14px;
+    gap: 14px;
 }
 
-.experienceHeader > span {
-  width: 70px;
-  height: 1px;
+.experienceHeader>span {
+    width: 70px;
+    height: 1px;
 
-  background: rgba(0, 0, 0, 0.18);
+    background: rgba(0, 0, 0, 0.18);
 }
 
 .sushiIcon {
-  font-size: 22px;
+    font-size: 22px;
 }
 
 .experience h2 {
-  margin: 12px 0 28px;
+    margin: 12px 0 28px;
 
-  font-size: 14px;
+    font-size: 14px;
 
-  font-weight: 700;
+    font-weight: 700;
 
-  letter-spacing: 4px;
+    letter-spacing: 4px;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  color: #242424;
+    color: #242424;
 }
 
 /* ========================================
@@ -446,73 +440,73 @@
 ======================================== */
 
 .steps {
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .stepWrapper {
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  flex: 1;
+    flex: 1;
 }
 
 .step {
-  flex: 1;
+    flex: 1;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  align-items: center;
+    align-items: center;
 }
 
 .stepNumber {
-  width: 48px;
-  height: 48px;
+    width: 48px;
+    height: 48px;
 
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 
-  border: 1px solid rgba(241, 90, 36, 0.25);
+    border: 1px solid rgba(241, 90, 36, 0.25);
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  background: #fffaf3;
+    background: #fffaf3;
 
-  color: #f15a24;
+    color: #f15a24;
 
-  font-size: 13px;
+    font-size: 13px;
 
-  font-weight: 800;
+    font-weight: 800;
 }
 
 .step strong {
-  font-size: 13px;
+    font-size: 13px;
 
-  color: #222;
+    color: #222;
 }
 
 .step span {
-  margin-top: 2px;
+    margin-top: 2px;
 
-  font-size: 12px;
+    font-size: 12px;
 
-  color: #777;
+    color: #777;
 }
 
 .stepArrow {
-  padding: 0 12px;
+    padding: 0 12px;
 
-  color: #f15a24;
+    color: #f15a24;
 
-  font-size: 20px;
+    font-size: 20px;
 }
 
 /* ========================================
@@ -520,31 +514,31 @@
 ======================================== */
 
 .footer {
-  display: flex;
+    display: flex;
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-  gap: 12px;
+    gap: 12px;
 
-  margin-top: 35px;
+    margin-top: 35px;
 
-  font-size: 9px;
+    font-size: 9px;
 
-  font-weight: 600;
+    font-weight: 600;
 
-  letter-spacing: 4px;
+    letter-spacing: 4px;
 
-  color: #999;
+    color: #999;
 }
 
 .footer i {
-  width: 35px;
-  height: 1px;
+    width: 35px;
+    height: 1px;
 
-  background: #f15a24;
+    background: #f15a24;
 
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 /* ========================================
@@ -552,21 +546,21 @@
 ======================================== */
 
 [dir='rtl'] {
-  .cardBrand {
-    letter-spacing: 2px;
-  }
+    .cardBrand {
+        letter-spacing: 2px;
+    }
 
-  .experience h2 {
-    letter-spacing: 1px;
-  }
+    .experience h2 {
+        letter-spacing: 1px;
+    }
 
-  .languageButton:hover .arrow {
-    transform: translateX(-3px);
-  }
+    .languageButton:hover .arrow {
+        transform: translateX(-3px);
+    }
 
-  .footer {
-    letter-spacing: 1px;
-  }
+    .footer {
+        letter-spacing: 1px;
+    }
 }
 
 /* ========================================
@@ -574,25 +568,25 @@
 ======================================== */
 
 @media (max-width: 850px) {
-  .container {
-    width: min(100% - 28px, 700px);
-  }
+    .container {
+        width: min(100% - 28px, 700px);
+    }
 
-  .languageCard {
-    padding: 35px 25px 30px;
-  }
+    .languageCard {
+        padding: 35px 25px 30px;
+    }
 
-  .languages {
-    gap: 12px;
-  }
+    .languages {
+        gap: 12px;
+    }
 
-  .languageButton {
-    min-height: 185px;
-  }
+    .languageButton {
+        min-height: 185px;
+    }
 
-  .steps {
-    gap: 5px;
-  }
+    .steps {
+        gap: 5px;
+    }
 }
 
 /* ========================================
@@ -600,224 +594,323 @@
 ======================================== */
 
 @media (max-width: 650px) {
-  .page {
-    min-height: 100dvh;
+    .page {
+        width: 100%;
+        min-height: 100dvh;
 
-    overflow-x: hidden;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        padding: 20px 11px 20px;
+
+        box-sizing: border-box;
+    }
+
+    /* ========================================
+     ORANGE DECORATION
+  ======================================== */
+
+    .orangeBrush {
+        width: 170px;
+        height: 60px;
+    }
+
+    /* ========================================
+     LOGO
+  ======================================== */
+
+    .header {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 5px;
+    }
+
+    .logo {
+        width: 210px;
+        height: auto;
+
+        margin: 0 auto;
+    }
+
+    /* ========================================
+     LANGUAGE CARD
+  ======================================== */
+
+    .languageCard {
+        width: 100%;
+        max-width: 520px;
+
+        box-sizing: border-box;
+
+        margin: 8px auto 0;
+
+        padding: 28px 15px 20px;
+
+        border-radius: 24px;
+
+        text-align: center;
+    }
+
+    /* ========================================
+     CARD DECORATION
+  ======================================== */
+
+    .cardDecoration {
+        margin-bottom: 10px;
+    }
+
+    .cardBrand {
+        margin-bottom: 10px;
+
+        font-size: 9px;
+
+        letter-spacing: 4px;
+    }
+
+    /* ========================================
+     TITLE
+  ======================================== */
+
+    .title {
+        font-size: 38px;
+
+        line-height: 1.08;
+
+        text-align: center;
+    }
+
+    /* ========================================
+     DESCRIPTION
+  ======================================== */
+
+    .description {
+        width: 100%;
+        max-width: 400px;
+
+        margin: 16px auto 25px;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+    /* ========================================
+     LANGUAGES
+  ======================================== */
+
+    .languages {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin: 0 auto;
+    }
+
+    /* ========================================
+     LANGUAGE BUTTON
+  ======================================== */
+
+    .languageButton {
+        width: 100%;
+
+        min-height: 105px;
+
+        box-sizing: border-box;
+
+        display: grid;
+
+        grid-template-columns: 65px minmax(0, 1fr) 42px;
+
+        grid-template-rows: 1fr 1fr;
+
+        align-items: center;
+
+        padding: 12px 16px;
+
+        margin: 0;
+
+        text-align: start;
+    }
+
+    /* ========================================
+     FLAG
+  ======================================== */
+
+    .flagContainer {
+        width: 58px;
+        height: 58px;
+
+        grid-row: span 2;
+
+        margin: 0;
+
+        justify-self: center;
+    }
+
+    .flagImage {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* ========================================
+     LANGUAGE TEXT
+  ======================================== */
+
+    .languageContent {
+        min-width: 0;
+
+        align-items: flex-start;
+
+        justify-content: center;
+    }
+
+    .languageContent strong {
+        font-size: 18px;
+    }
+
+    .languageContent span {
+        margin-top: 3px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+    /* ========================================
+     ARROW
+  ======================================== */
+
+    .arrow {
+        grid-column: 3;
+        grid-row: span 2;
+
+        width: 38px;
+        height: 38px;
+
+        margin: 0;
+
+        justify-self: end;
+    }
+
+    /* ========================================
+     EXPERIENCE
+  ======================================== */
+
+    .experience {
+        width: 100%;
+        max-width: 520px;
+
+        margin: 35px auto 0;
+
+        text-align: center;
+    }
+
+    .experienceHeader {
+        gap: 10px;
+    }
+
+    .experienceHeader>span {
+        width: 45px;
+    }
+
+    .sushiIcon {
+        font-size: 19px;
+    }
+
+    .experience h2 {
+        margin: 10px 0 22px;
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    /* ========================================
+     STEPS
+  ======================================== */
+
+    .steps {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px 5px;
+    }
+
+    .stepWrapper {
+        display: block;
+    }
+
+    .stepArrow {
+        display: none;
+    }
+
+    .stepNumber {
+        width: 42px;
+        height: 42px;
+
+        margin-bottom: 8px;
+
+        font-size: 11px;
+    }
+
+    .step strong {
+        font-size: 12px;
+    }
+
+    .step span {
+        font-size: 11px;
+    }
+
+    /* ========================================
+     FOOTER
+  ======================================== */
+
+    .footer {
+        margin-top: 30px;
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+    }
+
+    .footer i {
+        width: 25px;
+    }
+}
+
+@media (max-width: 650px) {
+  .page,
+  .container,
+  .languageCard,
+  .languages,
+  .experience {
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .container {
-    width: calc(100% - 22px);
-
-    padding: 20px 0 20px;
-  }
-
-  /* Orange decoration */
-
-  .orangeBrush {
-    width: 170px;
-    height: 60px;
-  }
-
-  /* Logo */
-
-  .header {
-    margin-bottom: 5px;
-  }
-
-  .logo {
-    width: 210px;
-  }
-
-  /* Card */
 
   .languageCard {
-    margin-top: 8px;
-
-    padding: 28px 15px 20px;
-
-    border-radius: 24px;
-  }
-
-  .cardDecoration {
-    margin-bottom: 10px;
-  }
-
-  .cardBrand {
-    margin-bottom: 10px;
-
-    font-size: 9px;
-
-    letter-spacing: 4px;
-  }
-
-  /* Title */
-
-  .title {
-    font-size: 38px;
-
-    line-height: 1.08;
-  }
-
-  /* Description */
-
-  .description {
-    margin: 16px auto 25px;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-  }
-
-  /* Languages */
-
-  .languages {
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-  }
-
-  /* Language button */
-
-  .languageButton {
-    min-height: 105px;
-
-    display: grid;
-
-    grid-template-columns: 65px 1fr 42px;
-
-    grid-template-rows: 1fr 1fr;
-
-    align-items: center;
-
-    text-align: start;
-
-    padding: 12px 16px;
-  }
-
-  /* Flag */
-
-  .flagContainer {
-    width: 58px;
-    height: 58px;
-
-    grid-row: span 2;
-
-    margin: 0;
-  }
-
-  .flagImage {
-    width: 48px;
-    height: 48px;
-  }
-
-  /* Language text */
-
-  .languageContent {
-    align-items: flex-start;
-
-    justify-content: center;
-  }
-
-  .languageContent strong {
-    font-size: 18px;
-  }
-
-  .languageContent span {
-    margin-top: 3px;
-
-    font-size: 9px;
-
-    letter-spacing: 1.5px;
-  }
-
-  /* Arrow */
-
-  .arrow {
-    grid-column: 3;
-    grid-row: span 2;
-
-    width: 38px;
-    height: 38px;
-
-    margin: 0;
-
-    justify-self: end;
-  }
-
-  /* Experience */
-
-  .experience {
-    margin-top: 35px;
-  }
-
-  .experienceHeader {
-    gap: 10px;
-  }
-
-  .experienceHeader > span {
-    width: 45px;
-  }
-
-  .sushiIcon {
-    font-size: 19px;
-  }
-
-  .experience h2 {
-    margin: 10px 0 22px;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-  }
-
-  /* Steps */
-
-  .steps {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 20px 5px;
-  }
-
-  .stepWrapper {
-    display: block;
-  }
-
-  .stepArrow {
-    display: none;
-  }
-
-  .stepNumber {
-    width: 42px;
-    height: 42px;
-
-    margin-bottom: 8px;
-
-    font-size: 11px;
-  }
-
-  .step strong {
-    font-size: 12px;
-  }
-
-  .step span {
-    font-size: 11px;
-  }
-
-  /* Footer */
-
-  .footer {
-    margin-top: 30px;
-
-    font-size: 7px;
-
-    letter-spacing: 2px;
-  }
-
-  .footer i {
-    width: 25px;
+    position: relative;
+    left: auto;
+    right: auto;
   }
 }
 
@@ -826,74 +919,74 @@
 ======================================== */
 
 @media (max-width: 380px) {
-  .container {
-    width: calc(100% - 16px);
+    .container {
+        width: calc(100% - 16px);
 
-    padding-top: 15px;
-  }
+        padding-top: 15px;
+    }
 
-  .logo {
-    width: 180px;
-  }
+    .logo {
+        width: 180px;
+    }
 
-  .languageCard {
-    padding: 24px 12px 17px;
+    .languageCard {
+        padding: 24px 12px 17px;
 
-    border-radius: 21px;
-  }
+        border-radius: 21px;
+    }
 
-  .title {
-    font-size: 33px;
-  }
+    .title {
+        font-size: 33px;
+    }
 
-  .description {
-    font-size: 13px;
+    .description {
+        font-size: 13px;
 
-    margin-bottom: 20px;
-  }
+        margin-bottom: 20px;
+    }
 
-  .languageButton {
-    min-height: 92px;
+    .languageButton {
+        min-height: 92px;
 
-    grid-template-columns: 58px 1fr 38px;
+        grid-template-columns: 58px 1fr 38px;
 
-    padding: 10px 12px;
-  }
+        padding: 10px 12px;
+    }
 
-  .flagContainer {
-    width: 52px;
-    height: 52px;
-  }
+    .flagContainer {
+        width: 52px;
+        height: 52px;
+    }
 
-  .flagImage {
-    width: 43px;
-    height: 43px;
-  }
+    .flagImage {
+        width: 43px;
+        height: 43px;
+    }
 
-  .languageContent strong {
-    font-size: 16px;
-  }
+    .languageContent strong {
+        font-size: 16px;
+    }
 
-  .languageContent span {
-    font-size: 8px;
-  }
+    .languageContent span {
+        font-size: 8px;
+    }
 
-  .arrow {
-    width: 34px;
-    height: 34px;
+    .arrow {
+        width: 34px;
+        height: 34px;
 
-    font-size: 18px;
-  }
+        font-size: 18px;
+    }
 
-  .experience {
-    margin-top: 28px;
-  }
+    .experience {
+        margin-top: 28px;
+    }
 
-  .experience h2 {
-    font-size: 10px;
-  }
+    .experience h2 {
+        font-size: 10px;
+    }
 
-  .footer {
-    margin-top: 24px;
-  }
+    .footer {
+        margin-top: 24px;
+    }
 }
