@@ -47,7 +47,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nems-poulet',
         category: 'starters',
-        image: '/nemspoulet.jpg',
+        image: '/nems.jpg',
         price: 9.5,
 
         name: {
@@ -64,7 +64,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nems-crevettes',
         category: 'starters',
-        image: '/nemscrevettes.jpg',
+        image: '/nems.jpg',
         price: 11,
 
         name: {
@@ -98,7 +98,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'spring-rolls-poulet',
         category: 'starters',
-        image: '/spring-rollspoulet.jpg',
+        image: '/spring-rolls-poulet.jpg',
         price: 10,
 
         name: {
@@ -115,7 +115,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'spring-rolls-crevettes',
         category: 'starters',
-        image: '/spring-rollscrevette.jpg',
+        image: '/spring-rolls-poulet.jpg',
         price: 11.5,
 
         name: {
@@ -132,7 +132,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'spring-rolls-saumon',
         category: 'starters',
-        image: '/spring-rolls.jpg',
+        image: '/spring-rolls-saumon.jpeg',
         price: 14.5,
 
         name: {
@@ -149,7 +149,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'chicken-cheese-yakitori',
         category: 'starters',
-        image: '/yakitori.jpg',
+        image: '/chicken-cheese-yakitori.jpeg',
         price: 12.5,
 
         name: {
@@ -183,7 +183,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crevettes-tempura',
         category: 'starters',
-        image: '/tempura.jpg',
+        image: '/crevettes-tempura.jpg',
         price: 18.5,
 
         name: {
@@ -200,7 +200,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'gyozas-poulet',
         category: 'starters',
-        image: '/gyozas.jpg',
+        image: '/gyozas-poulet.jpg',
         price: 13,
 
         name: {
@@ -217,7 +217,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'gyozas-boeuf',
         category: 'starters',
-        image: '/gyozas.jpg',
+        image: '/gyozas-poulet.jpg',
         price: 16,
 
         name: {
@@ -234,7 +234,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'gyozas-crevettes',
         category: 'starters',
-        image: '/gyozas.jpg',
+        image: '/gyozas-poulet.jpg',
         price: 17,
 
         name: {
