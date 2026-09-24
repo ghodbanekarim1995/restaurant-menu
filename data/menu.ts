@@ -44,6 +44,24 @@ export const menuItems: MenuItem[] = [
     // ENTRÉES
     // =====================================================
 
+
+        {
+        id: 'crab-balls',
+        category: 'starters',
+        image: '/crab-balls.jpg',
+        price: 12,
+
+        name: {
+            fr: 'Crab Balls (4 pièces)',
+            en: 'Crab Balls (4 pcs)',
+        },
+
+        description: {
+            fr: 'Pâte de crabe enrobée de pomme de terre et d’oignon, aromatisée à la coriandre et accompagnée de sauce sweet chili.',
+            en: 'Crab paste coated with potato and onion, flavored with coriander and served with sweet chili sauce.',
+        },
+    },
+
     {
         id: 'nems-poulet',
         category: 'starters',
@@ -75,23 +93,6 @@ export const menuItems: MenuItem[] = [
         description: {
             fr: 'Des lamelles de légumes avec vermicelles sautées, cuites dans des feuilles de riz et accompagnées de sauce sweet chili.',
             en: 'Vegetable strips with stir-fried vermicelli, wrapped in rice paper and served with sweet chili sauce.',
-        },
-    },
-
-    {
-        id: 'crab-balls',
-        category: 'starters',
-        image: '/crab-balls.jpg',
-        price: 12,
-
-        name: {
-            fr: 'Crab Balls (4 pièces)',
-            en: 'Crab Balls (4 pcs)',
-        },
-
-        description: {
-            fr: 'Pâte de crabe enrobée de pomme de terre et d’oignon, aromatisée à la coriandre et accompagnée de sauce sweet chili.',
-            en: 'Crab paste coated with potato and onion, flavored with coriander and served with sweet chili sauce.',
         },
     },
 
@@ -272,7 +273,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'ramen-poulet',
         category: 'soups',
-        image: '/ramenpoulet.jpg',
+        image: '',
         price: 22,
 
         name: {
@@ -289,7 +290,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'ramen-crevettes',
         category: 'soups',
-        image: '/ramencrevettes.jpg',
+        image: '/ramen-crevettes.jpg',
         price: 26,
 
         name: {
@@ -310,7 +311,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'boeuf-fromage',
         category: 'skewers',
-        image: '/beef-cheese.jpg',
+        image: '/boeuf-fromage.jpg',
         price: 19,
 
         name: {
@@ -327,7 +328,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'boeuf-fromage-pane',
         category: 'skewers',
-        image: '/beef-cheese.jpg',
+        image: '/boeuf-fromage-pane.jpg',
         price: 20,
 
         name: {
@@ -344,7 +345,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poulet-grille',
         category: 'skewers',
-        image: '/chicken-skewers.jpg',
+        image: '/poulet-grille.jpg',
         price: 15,
 
         name: {
@@ -361,7 +362,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poulet-pane',
         category: 'skewers',
-        image: '/chicken-skewers.jpg',
+        image: '/poulet-pane.jpg',
         price: 17,
 
         name: {
@@ -382,7 +383,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'salade-crabe',
         category: 'salads',
-        image: '/crab-salad.jpg',
+        image: '/salade-crabe.jpg',
         price: 17,
 
         name: {
@@ -399,7 +400,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'salade-thai',
         category: 'salads',
-        image: '/thai-salad.jpg',
+        image: '/salade-thai.jpg',
         price: 20,
 
         name: {
@@ -416,7 +417,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poke-bowl-saumon',
         category: 'salads',
-        image: '/poke-salmon.jpg',
+        image: '/poke-bowl-saumon.jpeg',
         price: 32,
 
         name: {
@@ -433,7 +434,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poke-bowl-crevettes',
         category: 'salads',
-        image: '/poke-shrimp.jpg',
+        image: '/poke-bowl-crevettes.jpeg',
         price: 32,
 
         name: {
@@ -450,7 +451,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poke-bowl-poulet-teriyaki',
         category: 'salads',
-        image: '/poke-chicken.jpg',
+        image: '/poke-bowl-poulet-teriyaki.jpeg',
         price: 28,
 
         name: {
@@ -471,7 +472,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'pad-thai-poulet',
         category: 'noodles',
-        image: '/pad-thai.jpg',
+        image: '/pad-thai-poulet.jpg',
         price: 28,
 
         name: {
@@ -480,15 +481,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Pad Thai au poulet.',
-            en: 'Chicken Pad Thai.',
+            fr: 'Nouilles de riz sautées au wok accompagnées de légumes croquants ,œuf et cacahuètes concassées,le tout relevé d une sauce thai légerement sucrée acidulée et savoureuse.',
+            en: 'Wok-fried rice noodles served with crunchy vegetables, egg, and crushed peanuts, all tossed in a slightly sweet, tangy, and flavorful Thai sauce.',
         },
     },
 
     {
         id: 'pad-thai-boeuf',
         category: 'noodles',
-        image: '/pad-thai.jpg',
+        image: '/pad-thai-boeuf.jpg',
         price: 32,
 
         name: {
@@ -497,15 +498,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Pad Thai au bœuf.',
-            en: 'Beef Pad Thai.',
+            fr: 'Nouilles de riz sautées au wok accompagnées de légumes croquants ,œuf et cacahuètes concassées,le tout relevé d une sauce thai légerement sucrée acidulée et savoureuse.',
+            en: 'Wok-fried rice noodles served with crunchy vegetables, egg, and crushed peanuts, all tossed in a slightly sweet, tangy, and flavorful Thai sauce.',
         },
     },
 
     {
         id: 'pad-thai-crevettes',
         category: 'noodles',
-        image: '/pad-thai.jpg',
+        image: '/pad-thai-crevettes.jpg',
         price: 34,
 
         name: {
@@ -514,15 +515,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Pad Thai aux crevettes.',
-            en: 'Shrimp Pad Thai.',
+            fr: 'Nouilles de riz sautées au wok accompagnées de légumes croquants ,œuf et cacahuètes concassées,le tout relevé d une sauce thai légerement sucrée acidulée et savoureuse.',
+            en: 'Wok-fried rice noodles served with crunchy vegetables, egg, and crushed peanuts, all tossed in a slightly sweet, tangy, and flavorful Thai sauce.',
         },
     },
 
     {
         id: 'pad-see-u-poulet',
         category: 'noodles',
-        image: '/pad-see-u.jpg',
+        image: '/pad-see-u-poulet.jpg',
         price: 27,
 
         name: {
@@ -531,15 +532,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Pad See U au poulet.',
-            en: 'Chicken Pad See Ew.',
+            fr: 'Nouilles fraiches sautées au wok,légumes croquants et sauce maison gourmande.',
+            en: 'Fresh noodles stir-fried in the wok with crunchy vegetables and a delicious homemade sauce.',
         },
     },
 
     {
         id: 'pad-see-u-boeuf',
         category: 'noodles',
-        image: '/pad-see-u.jpg',
+        image: '/pad-see-u-boeuf.jpg',
         price: 31,
 
         name: {
@@ -548,15 +549,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Pad See U au bœuf.',
-            en: 'Beef Pad See Ew.',
+            fr: 'Nouilles fraiches sautées au wok,légumes croquants et sauce maison gourmande.',
+            en: 'Fresh noodles stir-fried in the wok with crunchy vegetables and a delicious homemade sauce.',
         },
     },
 
     {
         id: 'pad-see-u-crevettes',
         category: 'noodles',
-        image: '/pad-see-u.jpg',
+        image: '/pad-see-u-crevettes.jpg',
         price: 33,
 
         name: {
@@ -565,15 +566,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Pad See U aux crevettes.',
-            en: 'Shrimp Pad See Ew.',
+            fr: 'Nouilles fraiches sautées au wok,légumes croquants et sauce maison gourmande.',
+            en: 'Fresh noodles stir-fried in the wok with crunchy vegetables and a delicious homemade sauce.',
         },
     },
 
     {
         id: 'drunken-noodles-poulet',
         category: 'noodles',
-        image: '/drunken-noodles.jpg',
+        image: '/drunken-noodles-poulet.jpg',
         price: 28,
 
         name: {
@@ -582,15 +583,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Drunken Noodles au poulet.',
-            en: 'Chicken Drunken Noodles.',
+            fr: 'Nouilles de riz sautées au wok légumes croquants, basilic et sauce maison savoureuse.',
+            en: 'Wok-fried rice noodles with crunchy vegetables, basil, and a flavorful homemade sauce.',
         },
     },
 
     {
         id: 'drunken-noodles-boeuf',
         category: 'noodles',
-        image: '/drunken-noodles.jpg',
+        image: '/drunken-noodles-boeuf.jpg',
         price: 32,
 
         name: {
@@ -599,15 +600,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Drunken Noodles au bœuf.',
-            en: 'Beef Drunken Noodles.',
+            fr: 'Nouilles de riz sautées au wok légumes croquants, basilic et sauce maison savoureuse.',
+            en: 'Wok-fried rice noodles with crunchy vegetables, basil, and a flavorful homemade sauce.',
         },
     },
 
     {
         id: 'drunken-noodles-crevettes',
         category: 'noodles',
-        image: '/drunken-noodles.jpg',
+        image: '/drunken-noodles-crevettes.jpg',
         price: 34,
 
         name: {
@@ -616,15 +617,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Drunken Noodles aux crevettes.',
-            en: 'Shrimp Drunken Noodles.',
+            fr: 'Nouilles de riz sautées au wok légumes croquants, basilic et sauce maison savoureuse.',
+            en: 'Wok-fried rice noodles with crunchy vegetables, basil, and a flavorful homemade sauce.',
         },
     },
 
     {
         id: 'seafood-noodles',
         category: 'noodles',
-        image: '/seafood-noodles.jpg',
+        image: '/seafood-noodles.jpeg',
         price: 37,
 
         name: {
@@ -633,15 +634,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Nouilles aux fruits de mer.',
-            en: 'Seafood noodles.',
+            fr: 'Nouilles de riz plates au fruit de mer.',
+            en: 'Flat rice noodles with seafood',
         },
     },
 
     {
         id: 'salmon-noodles',
         category: 'noodles',
-        image: '/salmon-noodles.jpg',
+        image: '',
         price: 37,
 
         name: {
@@ -650,15 +651,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Nouilles au saumon.',
-            en: 'Salmon noodles.',
+            fr: 'Des nouilles fraiches sautées aux légumes et saumon.',
+            en: 'Fresh stir-fried noodles with vegetables and salmon.',
         },
     },
 
     {
         id: 'vermicelles-poulet',
         category: 'noodles',
-        image: '/vermicelli.jpg',
+        image: '',
         price: 26,
 
         name: {
@@ -675,7 +676,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'vermicelles-boeuf',
         category: 'noodles',
-        image: '/vermicelli.jpg',
+        image: '',
         price: 30,
 
         name: {
@@ -692,7 +693,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'vermicelles-crevettes',
         category: 'noodles',
-        image: '/vermicelli.jpg',
+        image: '',
         price: 32,
 
         name: {
