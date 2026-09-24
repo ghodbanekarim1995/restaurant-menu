@@ -241,7 +241,7 @@ export default function LandingPage() {
             <div className={styles.restaurantInfoText}>
               <span>NOUS TROUVER</span>
               <strong>14 avenue de l'environnement</strong>
-              <small>L'Aouina</small>
+              <small>L&apos;Aouina</small>
             </div>
           </div>
 
