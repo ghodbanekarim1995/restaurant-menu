@@ -45,7 +45,7 @@ export const menuItems: MenuItem[] = [
     // =====================================================
 
 
-        {
+    {
         id: 'crab-balls',
         category: 'starters',
         image: '/crab-balls.jpg',
@@ -714,7 +714,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nasi-goreng-poulet',
         category: 'fried-rice',
-        image: '/nasi-goreng.jpg',
+        image: '/nasi-goreng-poulet.jpg',
         price: 24.5,
 
         name: {
@@ -723,15 +723,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Nasi Goreng au poulet.',
-            en: 'Chicken Nasi Goreng.',
+            fr: 'Riz parfumé sauté au wok,légumes croquants œuf et sauce maison savoureuse.',
+            en: 'Fragrant rice stir-fried in the wok with crunchy vegetables, egg, and a flavorful homemade sauce.',
         },
     },
 
     {
         id: 'nasi-goreng-boeuf',
         category: 'fried-rice',
-        image: '/nasi-goreng.jpg',
+        image: '/nasi-goreng-boeuf.jpg',
         price: 27.5,
 
         name: {
@@ -740,15 +740,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Nasi Goreng au bœuf.',
-            en: 'Beef Nasi Goreng.',
+            fr: 'Riz parfumé sauté au wok,légumes croquants œuf et sauce maison savoureuse.',
+            en: 'Fragrant rice stir-fried in the wok with crunchy vegetables, egg, and a flavorful homemade sauce.',
         },
     },
 
     {
         id: 'nasi-goreng-crevettes',
         category: 'fried-rice',
-        image: '/nasi-goreng.jpg',
+        image: '/nasi-goreng-crevettes.jpg',
         price: 29.5,
 
         name: {
@@ -757,15 +757,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Nasi Goreng aux crevettes.',
-            en: 'Shrimp Nasi Goreng.',
+            fr: 'Riz parfumé sauté au wok,légumes croquants œuf et sauce maison savoureuse.',
+            en: 'Fragrant rice stir-fried in the wok with crunchy vegetables, egg, and a flavorful homemade sauce.',
         },
     },
 
     {
         id: 'khao-pad-sapparod-poulet',
         category: 'fried-rice',
-        image: '/khao-pad-sapparod.jpg',
+        image: '',
         price: 28,
 
         name: {
@@ -774,15 +774,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Khao Pad Sapparod au poulet.',
-            en: 'Chicken Khao Pad Sapparod.',
+            fr: 'Une évasion exotique est assuré par ce plat ;riz sautés avec des morceaux d ananas agrémentés de curry jaune',
+            en: 'An exotic escape awaits with this dish: stir-fried rice with chunks of pineapple, enhanced with aromatic yellow curry.',
         },
     },
 
     {
         id: 'khao-pad-sapparod-crevettes',
         category: 'fried-rice',
-        image: '/khao-pad-sapparod.jpg',
+        image: '/khao-pad-sapparod-crevettes.jpeg',
         price: 33,
 
         name: {
@@ -791,15 +791,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Khao Pad Sapparod aux crevettes.',
-            en: 'Shrimp Khao Pad Sapparod.',
+            fr: 'Une évasion exotique est assuré par ce plat ;riz sautés avec des morceaux d ananas agrémentés de curry jaune',
+            en: 'An exotic escape awaits with this dish: stir-fried rice with chunks of pineapple, enhanced with aromatic yellow curry.',
         },
     },
 
     {
         id: 'seafood-rice',
         category: 'fried-rice',
-        image: '/seafood-rice.jpg',
+        image: '',
         price: 32,
 
         name: {
@@ -808,15 +808,15 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Riz aux fruits de mer.',
-            en: 'Seafood rice.',
+            fr: 'Rruit de mer(crevettes crabe et seiche)sur un lit de riz sautés servi avec un œuf.',
+            en: 'Seafood (shrimp, crab, and squid) served on a bed of stir-fried rice, accompanied by an egg.',
         },
     },
 
     {
         id: 'shrimp-teriyaki-fried-rice',
         category: 'fried-rice',
-        image: '/shrimp-teriyaki-rice.jpg',
+        image: '',
         price: 29,
 
         name: {
@@ -825,8 +825,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Riz sauté aux crevettes teriyaki.',
-            en: 'Fried rice with teriyaki shrimp.',
+            fr: 'Pour les amateurs du gout sucré salé  des crevettes avec du riz sauté dans une sauce teriyaki.',
+            en: 'For lovers of sweet and savory flavors: succulent shrimp with stir-fried rice, tossed in a delicious teriyaki sauce.',
         },
     },
 
@@ -837,7 +837,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'chicken-satay',
         category: 'wok',
-        image: '/chicken-satay.jpg',
+        image: '/chicken-satay.jpeg',
         price: 19,
 
         name: {
@@ -854,7 +854,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'pad-kaprao-poulet',
         category: 'wok',
-        image: '/pad-kaprao.jpg',
+        image: '/pad-kaprao-poulet.jpg',
         price: 25,
 
         name: {
@@ -871,7 +871,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'pad-kaprao-boeuf',
         category: 'wok',
-        image: '/pad-kaprao.jpg',
+        image: '/pad-kaprao-boeuf.jpg',
         price: 28,
 
         name: {
@@ -888,7 +888,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'pad-kaprao-crevettes',
         category: 'wok',
-        image: '/pad-kaprao.jpg',
+        image: '/pad-kaprao-crevettes.jpg',
         price: 30,
 
         name: {
@@ -905,7 +905,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poulet-katsu',
         category: 'wok',
-        image: '/chicken-katsu.jpg',
+        image: '/poulet-katsu.jpg',
         price: 22,
 
         name: {
@@ -919,6 +919,23 @@ export const menuItems: MenuItem[] = [
         },
     },
 
+    {
+        id: 'katsu-curry',
+        category: 'wok',
+        image: '/katsu-curry.jpg',
+        price: 32,
+
+        name: {
+            fr: 'Katsu curry ',
+            en: 'Katsu curry ',
+        },
+
+        description: {
+            fr: 'Poulet panné a la japonaise avec riz et sauce au curry épaisse et parfumée',
+            en: 'Japanese-style breaded chicken served with rice and a rich, aromatic curry sauce.',
+        },
+    },
+
     // =====================================================
     // NIGIRI — 2 PIÈCES
     // =====================================================
@@ -926,7 +943,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nigiri-saumon',
         category: 'nigiri',
-        image: '/nigiri.jpg',
+        image: '/nigiri-saumon.jpg',
         price: 9,
 
         name: {
@@ -943,7 +960,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nigiri-crevettes',
         category: 'nigiri',
-        image: '/nigiri.jpg',
+        image: '/nigiri-crevettes.jpg',
         price: 9,
 
         name: {
@@ -960,7 +977,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nigiri-saumon-avocat',
         category: 'nigiri',
-        image: '/nigiri.jpg',
+        image: '/nigiri-saumon-avocat.jpg',
         price: 10,
 
         name: {
@@ -977,7 +994,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nigiri-thon',
         category: 'nigiri',
-        image: '/nigiri.jpg',
+        image: '/nigiri-thon.jpg',
         price: 8,
 
         name: {
@@ -1305,21 +1322,6 @@ export const menuItems: MenuItem[] = [
     },
 
     {
-        id: 'california-atlantique',
-        category: 'california',
-        image: '',
-        price: 24,
-        name: {
-            fr: 'Atlantique',
-            en: 'Atlantic',
-        },
-        description: {
-            fr: 'Saumon fumé, avocat, menthe, fromage, aneth',
-            en: 'Smoked salmon, avocado, mint, cheese, dill',
-        },
-    },
-
-    {
         id: 'california-tuna-roll',
         category: 'california',
         image: '/california-tuna-roll.png',
@@ -1394,6 +1396,21 @@ export const menuItems: MenuItem[] = [
         },
     },
 
+    {
+        id: 'california-atlantique',
+        category: 'california',
+        image: '/california-atlantique.jpeg',
+        price: 24,
+        name: {
+            fr: 'Atlantique',
+            en: 'Atlantic',
+        },
+        description: {
+            fr: 'Saumon fumé, avocat, menthe, fromage, aneth',
+            en: 'Smoked salmon, avocado, mint, cheese, dill',
+        },
+    },
+
     // =====================================================
     // CRUNCHY
     // =====================================================
@@ -1452,7 +1469,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-crab-surimi',
         category: 'crunchy',
-        image: '',
+        image: '/crunchy-crab-surimi.jpeg',
         price: 21,
 
         name: {
@@ -1469,7 +1486,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-futomaki',
         category: 'crunchy',
-        image: '',
+        image: '/crunchy-futomaki.jpeg',
         price: 19.5,
 
         name: {
@@ -1486,7 +1503,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'dragon-eye',
         category: 'crunchy',
-        image: '',
+        image: '/dragon-eye.jpg',
         price: 20,
 
         name: {
@@ -1504,7 +1521,7 @@ export const menuItems: MenuItem[] = [
         id: 'crunchy-hoso-saumon',
         category: 'crunchy',
         image: '',
-        price: 0,
+        price: 19,
 
         name: {
             fr: 'Hoso saumon',
@@ -1609,7 +1626,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'iceberg',
         category: 'chef-roll',
-        image: '',
+        image: '/iceberg.jpeg',
         price: 32,
 
         name: {
@@ -1664,7 +1681,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hot-roll-salmon',
         category: 'hot-roll',
-        image: '',
+        image: '/hot-roll-salmon.jpg',
         price: 24,
 
         name: {
@@ -1681,7 +1698,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hot-roll-shrimp',
         category: 'hot-roll',
-        image: '',
+        image: '/hot-roll-shrimp.jpg',
         price: 24,
 
         name: {
@@ -1719,7 +1736,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'sushi-burger-salmon',
         category: 'sushi-burger',
-        image: '',
+        image: '/sushi-burger-salmon.jpg',
         price: 27.5,
 
         name: {
@@ -1757,7 +1774,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poke-burger-salmon',
         category: 'poke-burger',
-        image: '',
+        image: '/poke-burger-salmon.jpg',
         price: 28,
 
         name: {
@@ -1774,7 +1791,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'poke-burger-shrimp',
         category: 'poke-burger',
-        image: '',
+        image: '/poke-burger-shrimp.jpg',
         price: 28,
 
         name: {
@@ -1802,6 +1819,70 @@ export const menuItems: MenuItem[] = [
         description: {
             fr: 'Thon rouge mariné, avocat, salade de crabe et fromage avec nos sauces maison. Le pain est remplacé par des galettes de riz.',
             en: 'Marinated red tuna, avocado, crab salad and cheese with our homemade sauces. Rice cakes replace the traditional burger bun.',
+        },
+    },
+
+
+    //boxe
+
+
+    {
+        id: 'rock-n-roll-mix',
+        category: 'boxes',
+        image: '/rock-n-roll-mix.jpg',
+        price: 85,
+        name: {
+            fr: 'Rock N Roll Mix',
+            en: 'Rock N Roll Mix',
+        },
+        description: {
+            fr: '8 Rainbow · 6 Futomaki F5 · 8 California Fresh · 4 Fuji Roll · 8 Crunchy Maki Saumon',
+            en: '8 Rainbow · 6 Futomaki F5 · 8 Fresh California · 4 Fuji Roll · 8 Salmon Crunchy Maki',
+        },
+    },
+
+    {
+        id: 'mix-32',
+        category: 'boxes',
+        image: '/mix-32.jpg',
+        price: 75,
+        name: {
+            fr: 'Mix 32',
+            en: 'Mix 32',
+        },
+        description: {
+            fr: '5 Futomaki · 5 Dragon Eye (Crunchy) · 8 California · 10 Hosomaki · 4 Nigiri',
+            en: '5 Futomaki · 5 Dragon Eye (Crunchy) · 8 California · 10 Hosomaki · 4 Nigiri',
+        },
+    },
+
+       {
+        id: 'apero-box',
+        category: 'boxes',
+        image: '/apero-box.jpeg',
+        price: 70,
+        name: {
+            fr: 'Apéro Box',
+            en: 'Apéro Box',
+        },
+        description: {
+            fr: 'Une sélection idéale pour l’apéritif',
+            en: 'A selection made for aperitif',
+        },
+    },
+
+       {
+        id: 'wok-time-box',
+        category: 'boxes',
+        image: '/wok-time-box.jpeg',
+        price: 38,
+        name: {
+            fr: 'Wok Time Box',
+            en: 'Wok Time Box',
+        },
+        description: {
+            fr: 'Une sélection spéciale Wok N Roll',
+            en: 'A special Wok N Roll selection',
         },
     },
 
@@ -1837,24 +1918,9 @@ export const menuItems: MenuItem[] = [
     },
 
     {
-        id: 'mix-32',
-        category: 'boxes',
-        image: '',
-        price: 75,
-        name: {
-            fr: 'Mix 32',
-            en: 'Mix 32',
-        },
-        description: {
-            fr: '5 Futomaki · 5 Dragon Eye (Crunchy) · 8 California · 10 Hosomaki · 4 Nigiri',
-            en: '5 Futomaki · 5 Dragon Eye (Crunchy) · 8 California · 10 Hosomaki · 4 Nigiri',
-        },
-    },
-
-    {
         id: 'mix-48',
         category: 'boxes',
-        image: '',
+        image: '/mix-48.jpeg',
         price: 112,
         name: {
             fr: 'Mix 48',
@@ -1869,7 +1935,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'mix-72',
         category: 'boxes',
-        image: '',
+        image: '/mix-72.jpeg',
         price: 170,
         name: {
             fr: 'Mix 72',
@@ -1896,55 +1962,15 @@ export const menuItems: MenuItem[] = [
         },
     },
 
-    {
-        id: 'rock-n-roll-mix',
-        category: 'boxes',
-        image: '',
-        price: 85,
-        name: {
-            fr: 'Rock N Roll Mix',
-            en: 'Rock N Roll Mix',
-        },
-        description: {
-            fr: '8 Rainbow · 6 Futomaki F5 · 8 California Fresh · 4 Fuji Roll · 8 Crunchy Maki Saumon',
-            en: '8 Rainbow · 6 Futomaki F5 · 8 Fresh California · 4 Fuji Roll · 8 Salmon Crunchy Maki',
-        },
-    },
 
-    {
-        id: 'wok-time-box',
-        category: 'boxes',
-        image: '',
-        price: 38,
-        name: {
-            fr: 'Wok Time Box',
-            en: 'Wok Time Box',
-        },
-        description: {
-            fr: 'Une sélection spéciale Wok N Roll',
-            en: 'A special Wok N Roll selection',
-        },
-    },
 
-    {
-        id: 'apero-box',
-        category: 'boxes',
-        image: '',
-        price: 70,
-        name: {
-            fr: 'Apéro Box',
-            en: 'Apéro Box',
-        },
-        description: {
-            fr: 'Une sélection idéale pour l’apéritif',
-            en: 'A selection made for aperitif',
-        },
-    },
+
+
 
     {
         id: 'all-salmon-mix-12',
         category: 'all-salmon-mix',
-        image: '',
+        image: '/all-salmon-mix-12.jpeg',
         price: 39,
         name: {
             fr: 'Mix 12',
@@ -1959,7 +1985,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'all-salmon-mix-24',
         category: 'all-salmon-mix',
-        image: '',
+        image: '/all-salmon-mix-12.jpeg',
         price: 70,
         name: {
             fr: 'Mix 24',
@@ -1974,7 +2000,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-mix-12',
         category: 'crunchy-mix',
-        image: '',
+        image: '/crunchy-mix-12.jpeg',
         price: 35,
         name: {
             fr: 'Mix 12',
@@ -1989,7 +2015,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-mix-24',
         category: 'crunchy-mix',
-        image: '',
+        image: '/crunchy-mix-24.jpeg',
         price: 65,
         name: {
             fr: 'Mix 24',
@@ -2004,7 +2030,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-mix-32',
         category: 'crunchy-mix',
-        image: '',
+        image: '/crunchy-mix-32.jpeg',
         price: 79,
         name: {
             fr: 'Mix 32',
