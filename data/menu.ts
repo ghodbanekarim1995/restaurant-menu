@@ -6,7 +6,20 @@ export type MenuCategory =
     | 'noodles'
     | 'fried-rice'
     | 'wok'
-    | 'sushi'
+    | 'nigiri'
+    | 'sashimi'
+    | 'hosomaki'
+    | 'futomaki'
+    | 'crunchy'
+    | 'chef-roll'
+    | 'hot-roll'
+    | 'sushi-burger'
+    | 'poke-burger'
+    | 'boxes'
+    | 'all-salmon-mix'
+    | 'crunchy-mix'
+    | 'boisson'
+    | 'supplements'
 
 export type MenuItem = {
     id: string
@@ -904,47 +917,13 @@ export const menuItems: MenuItem[] = [
         },
     },
 
-    {
-        id: 'wok-time-box ',
-        category: 'wok',
-        image: '/chicken-katsu.jpg',
-        price: 38,
-
-        name: {
-            fr: 'Wok time box ',
-            en: 'Wok time box ',
-        },
-
-        description: {
-            fr: '...',
-            en: '...',
-        },
-    },
-
-    {
-        id: 'apero-box',
-        category: 'wok',
-        image: '/chicken-katsu.jpg',
-        price: 70,
-
-        name: {
-            fr: 'Apero box ',
-            en: 'Apero box ',
-        },
-
-        description: {
-            fr: '...',
-            en: '...',
-        },
-    },
-
     // =====================================================
-    // SUSHI — NIGIRI
+    // NIGIRI — 2 PIÈCES
     // =====================================================
 
     {
         id: 'nigiri-saumon',
-        category: 'sushi',
+        category: 'nigiri',
         image: '/nigiri.jpg',
         price: 9,
 
@@ -961,7 +940,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'nigiri-crevettes',
-        category: 'sushi',
+        category: 'nigiri',
         image: '/nigiri.jpg',
         price: 9,
 
@@ -978,7 +957,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'nigiri-saumon-avocat',
-        category: 'sushi',
+        category: 'nigiri',
         image: '/nigiri.jpg',
         price: 10,
 
@@ -995,7 +974,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'nigiri-thon',
-        category: 'sushi',
+        category: 'nigiri',
         image: '/nigiri.jpg',
         price: 8,
 
@@ -1011,12 +990,12 @@ export const menuItems: MenuItem[] = [
     },
 
     // =====================================================
-    // SASHIMI
+    // SASHIMI — 3 PIÈCES
     // =====================================================
 
     {
         id: 'sashimi-thon',
-        category: 'sushi',
+        category: 'sashimi',
         image: '/sashimi.jpg',
         price: 10,
 
@@ -1033,7 +1012,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'sashimi-saumon',
-        category: 'sushi',
+        category: 'sashimi',
         image: '/sashimi.jpg',
         price: 11,
 
@@ -1050,7 +1029,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'sashimi-tataki-thon',
-        category: 'sushi',
+        category: 'sashimi',
         image: '/sashimi.jpg',
         price: 11,
 
@@ -1067,7 +1046,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'sashimi-tataki-saumon',
-        category: 'sushi',
+        category: 'sashimi',
         image: '/sashimi.jpg',
         price: 12,
 
@@ -1083,12 +1062,12 @@ export const menuItems: MenuItem[] = [
     },
 
     // =====================================================
-    // HOSOMAKI
+    // HOSOMAKI — 6 PIÈCES
     // =====================================================
 
     {
         id: 'hosomaki-saumon',
-        category: 'sushi',
+        category: 'hosomaki',
         image: '/hosomaki.jpg',
         price: 14.5,
 
@@ -1105,7 +1084,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'hosomaki-crevettes-tempura',
-        category: 'sushi',
+        category: 'hosomaki',
         image: '/hosomaki.jpg',
         price: 14.5,
 
@@ -1122,7 +1101,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'hosomaki-thon',
-        category: 'sushi',
+        category: 'hosomaki',
         image: '/hosomaki.jpg',
         price: 13,
 
@@ -1139,7 +1118,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'hosomaki-concombre-fromage',
-        category: 'sushi',
+        category: 'hosomaki',
         image: '/hosomaki.jpg',
         price: 10,
 
@@ -1156,7 +1135,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'hosomaki-avocat-fromage',
-        category: 'sushi',
+        category: 'hosomaki',
         image: '/hosomaki.jpg',
         price: 12,
 
@@ -1173,7 +1152,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'hosomaki-crabe-pane',
-        category: 'sushi',
+        category: 'hosomaki',
         image: '/hosomaki.jpg',
         price: 11,
 
@@ -1189,12 +1168,12 @@ export const menuItems: MenuItem[] = [
     },
 
     // =====================================================
-    // FUTOMAKI
+    // FUTOMAKI — 5 PIÈCES
     // =====================================================
 
     {
         id: 'futomaki-f1',
-        category: 'sushi',
+        category: 'futomaki',
         image: '/futomaki.jpg',
         price: 17,
 
@@ -1211,7 +1190,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'futomaki-f2',
-        category: 'sushi',
+        category: 'futomaki',
         image: '/futomaki.jpg',
         price: 15.5,
 
@@ -1228,7 +1207,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'futomaki-f3',
-        category: 'sushi',
+        category: 'futomaki',
         image: '/futomaki.jpg',
         price: 18.5,
 
@@ -1245,7 +1224,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'futomaki-f4',
-        category: 'sushi',
+        category: 'futomaki',
         image: '/futomaki.jpg',
         price: 17,
 
@@ -1262,7 +1241,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'futomaki-f5',
-        category: 'sushi',
+        category: 'futomaki',
         image: '/futomaki.jpg',
         price: 18,
 
@@ -1278,12 +1257,12 @@ export const menuItems: MenuItem[] = [
     },
 
     // =====================================================
-    // CRUNCHY — 8 PIÈCES
+    // CRUNCHY
     // =====================================================
 
     {
         id: 'crunchy-chicken-roll',
-        category: 'sushi',
+        category: 'crunchy',
         image: '',
         price: 21,
 
@@ -1300,7 +1279,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'crunchy-ebi-maki',
-        category: 'sushi',
+        category: 'crunchy',
         image: '',
         price: 24,
 
@@ -1317,7 +1296,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'crunchy-salmon-roll',
-        category: 'sushi',
+        category: 'crunchy',
         image: '',
         price: 25,
 
@@ -1334,7 +1313,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'crunchy-crab-surimi',
-        category: 'sushi',
+        category: 'crunchy',
         image: '',
         price: 21,
 
@@ -1351,7 +1330,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'crunchy-futomaki',
-        category: 'sushi',
+        category: 'crunchy',
         image: '',
         price: 19.5,
 
@@ -1368,7 +1347,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'dragon-eye',
-        category: 'sushi',
+        category: 'crunchy',
         image: '',
         price: 20,
 
@@ -1383,13 +1362,30 @@ export const menuItems: MenuItem[] = [
         },
     },
 
+    {
+        id: 'crunchy-hoso-saumon',
+        category: 'crunchy',
+        image: '',
+        price: 0,
+
+        name: {
+            fr: 'Hoso saumon',
+            en: 'Salmon Hoso',
+        },
+
+        description: {
+            fr: 'Hosomaki saumon, avocat et mayonnaise épicée.',
+            en: 'Salmon hosomaki with avocado and spicy mayonnaise.',
+        },
+    },
+
     // =====================================================
     // ROULEAU DU CHEF — 8 PIÈCES
     // =====================================================
 
     {
         id: 'shake-yaki',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 33,
 
@@ -1406,7 +1402,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'green-dragon',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 32,
 
@@ -1423,7 +1419,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'red-dragon',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 30,
 
@@ -1440,7 +1436,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'hot-and-cold',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 33,
 
@@ -1457,7 +1453,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'rainbow',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 33,
 
@@ -1474,7 +1470,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'iceberg',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 32,
 
@@ -1491,7 +1487,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'fuji',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 31,
 
@@ -1508,7 +1504,7 @@ export const menuItems: MenuItem[] = [
 
     {
         id: 'tokyo-roll',
-        category: 'sushi',
+        category: 'chef-roll',
         image: '',
         price: 30,
 
@@ -1520,6 +1516,624 @@ export const menuItems: MenuItem[] = [
         description: {
             fr: 'Avocat, laitue et fromage avec du riz enroulé au saumon.',
             en: 'Avocado, lettuce and cheese with rice wrapped in salmon.',
+        },
+    },
+
+    // =====================================================
+    // HOT ROLL — MAKI DOG
+    // =====================================================
+
+    {
+        id: 'hot-roll-salmon',
+        category: 'hot-roll',
+        image: '',
+        price: 24,
+
+        name: {
+            fr: 'Hot Roll Salmon',
+            en: 'Salmon Hot Roll',
+        },
+
+        description: {
+            fr: 'Saumon frais, fromage, avocat, oignon frit, sauce creamy sriracha et sauce teriyaki.',
+            en: 'Fresh salmon, cheese, avocado, fried onion, creamy sriracha sauce and teriyaki sauce.',
+        },
+    },
+
+    {
+        id: 'hot-roll-shrimp',
+        category: 'hot-roll',
+        image: '',
+        price: 24,
+
+        name: {
+            fr: 'Hot Roll Shrimp',
+            en: 'Shrimp Hot Roll',
+        },
+
+        description: {
+            fr: 'Crevette tempura, fromage, avocat, oignon frit, sauce creamy sriracha et sauce teriyaki.',
+            en: 'Tempura shrimp, cheese, avocado, fried onion, creamy sriracha sauce and teriyaki sauce.',
+        },
+    },
+
+    {
+        id: 'hot-roll-tuna',
+        category: 'hot-roll',
+        image: '',
+        price: 22,
+
+        name: {
+            fr: 'Hot Roll Tuna',
+            en: 'Tuna Hot Roll',
+        },
+
+        description: {
+            fr: 'Thon rouge cuit, fromage, avocat, oignon frit, sauce épicée et sauce teriyaki.',
+            en: 'Cooked red tuna, cheese, avocado, fried onion, spicy sauce and teriyaki sauce.',
+        },
+    },
+
+    // =====================================================
+    // SUSHI BURGER
+    // =====================================================
+
+    {
+        id: 'sushi-burger-salmon',
+        category: 'sushi-burger',
+        image: '',
+        price: 27.5,
+
+        name: {
+            fr: 'Sushi Burger Salmon',
+            en: 'Salmon Sushi Burger',
+        },
+
+        description: {
+            fr: 'Saumon frais, fromage, avocat, surimi mix et riz vinaigré enrobé de feuilles d’algues, avec sauce mayo épicée et teriyaki.',
+            en: 'Fresh salmon, cheese, avocado, mixed crab surimi and seasoned rice wrapped in seaweed, with spicy mayo and teriyaki sauce.',
+        },
+    },
+
+    {
+        id: 'sushi-burger-shrimp',
+        category: 'sushi-burger',
+        image: '',
+        price: 27.5,
+
+        name: {
+            fr: 'Sushi Burger Shrimp',
+            en: 'Shrimp Sushi Burger',
+        },
+
+        description: {
+            fr: 'Crevettes tempura, fromage, avocat, surimi mix et riz vinaigré enrobé de feuilles d’algues, avec sauce mayo épicée et teriyaki.',
+            en: 'Tempura shrimp, cheese, avocado, mixed crab surimi and seasoned rice wrapped in seaweed, with spicy mayo and teriyaki sauce.',
+        },
+    },
+
+    // =====================================================
+    // POKE BURGER
+    // =====================================================
+
+    {
+        id: 'poke-burger-salmon',
+        category: 'poke-burger',
+        image: '',
+        price: 28,
+
+        name: {
+            fr: 'Poke Burger Salmon',
+            en: 'Salmon Poke Burger',
+        },
+
+        description: {
+            fr: 'Saumon mariné, avocat, salade de crabe et fromage avec nos sauces maison. Le pain est remplacé par des galettes de riz.',
+            en: 'Marinated salmon, avocado, crab salad and cheese with our homemade sauces. Rice cakes replace the traditional burger bun.',
+        },
+    },
+
+    {
+        id: 'poke-burger-shrimp',
+        category: 'poke-burger',
+        image: '',
+        price: 28,
+
+        name: {
+            fr: 'Poke Burger Shrimp',
+            en: 'Shrimp Poke Burger',
+        },
+
+        description: {
+            fr: 'Crevettes tempura, avocat, salade de crabe et fromage avec nos sauces maison. Le pain est remplacé par des galettes de riz.',
+            en: 'Tempura shrimp, avocado, crab salad and cheese with our homemade sauces. Rice cakes replace the traditional burger bun.',
+        },
+    },
+
+    {
+        id: 'poke-burger-tuna',
+        category: 'poke-burger',
+        image: '',
+        price: 25,
+
+        name: {
+            fr: 'Poke Burger Tuna',
+            en: 'Tuna Poke Burger',
+        },
+
+        description: {
+            fr: 'Thon rouge mariné, avocat, salade de crabe et fromage avec nos sauces maison. Le pain est remplacé par des galettes de riz.',
+            en: 'Marinated red tuna, avocado, crab salad and cheese with our homemade sauces. Rice cakes replace the traditional burger bun.',
+        },
+    },
+
+
+    {
+        id: 'mix-12',
+        category: 'boxes',
+        image: '',
+        price: 33,
+        name: {
+            fr: 'Mix 12',
+            en: 'Mix 12',
+        },
+        description: {
+            fr: '5 Futomaki · 4 California · 3 Hosomaki',
+            en: '5 Futomaki · 4 California · 3 Hosomaki',
+        },
+    },
+
+    {
+        id: 'mix-24',
+        category: 'boxes',
+        image: '',
+        price: 61,
+        name: {
+            fr: 'Mix 24',
+            en: 'Mix 24',
+        },
+        description: {
+            fr: '10 Futomaki · 8 California · 6 Hosomaki',
+            en: '10 Futomaki · 8 California · 6 Hosomaki',
+        },
+    },
+
+    {
+        id: 'mix-32',
+        category: 'boxes',
+        image: '',
+        price: 75,
+        name: {
+            fr: 'Mix 32',
+            en: 'Mix 32',
+        },
+        description: {
+            fr: '5 Futomaki · 5 Dragon Eye (Crunchy) · 8 California · 10 Hosomaki · 4 Nigiri',
+            en: '5 Futomaki · 5 Dragon Eye (Crunchy) · 8 California · 10 Hosomaki · 4 Nigiri',
+        },
+    },
+
+    {
+        id: 'mix-48',
+        category: 'boxes',
+        image: '',
+        price: 112,
+        name: {
+            fr: 'Mix 48',
+            en: 'Mix 48',
+        },
+        description: {
+            fr: '10 Futomaki · 10 Dragon Eye (Crunchy) · 16 California · 6 Hosomaki · 6 Nigiri',
+            en: '10 Futomaki · 10 Dragon Eye (Crunchy) · 16 California · 6 Hosomaki · 6 Nigiri',
+        },
+    },
+
+    {
+        id: 'mix-72',
+        category: 'boxes',
+        image: '',
+        price: 170,
+        name: {
+            fr: 'Mix 72',
+            en: 'Mix 72',
+        },
+        description: {
+            fr: '15 Futomaki · 15 Crunchy · 24 California · 12 Hosomaki · 6 Nigiri',
+            en: '15 Futomaki · 15 Crunchy · 24 California · 12 Hosomaki · 6 Nigiri',
+        },
+    },
+
+    {
+        id: 'le-tout-cuit',
+        category: 'boxes',
+        image: '',
+        price: 77,
+        name: {
+            fr: 'Le Tout Cuit',
+            en: 'Le Tout Cuit',
+        },
+        description: {
+            fr: '8 California crevette tempura · 8 California saumon tempura · 8 Hosomaki surimi pané · 8 Ebi Maki',
+            en: '8 Tempura Shrimp California · 8 Tempura Salmon California · 8 Breaded Surimi Hosomaki · 8 Ebi Maki',
+        },
+    },
+
+    {
+        id: 'rock-n-roll-mix',
+        category: 'boxes',
+        image: '',
+        price: 85,
+        name: {
+            fr: 'Rock N Roll Mix',
+            en: 'Rock N Roll Mix',
+        },
+        description: {
+            fr: '8 Rainbow · 6 Futomaki F5 · 8 California Fresh · 4 Fuji Roll · 8 Crunchy Maki Saumon',
+            en: '8 Rainbow · 6 Futomaki F5 · 8 Fresh California · 4 Fuji Roll · 8 Salmon Crunchy Maki',
+        },
+    },
+
+    {
+        id: 'wok-time-box',
+        category: 'boxes',
+        image: '',
+        price: 38,
+        name: {
+            fr: 'Wok Time Box',
+            en: 'Wok Time Box',
+        },
+        description: {
+            fr: 'Une sélection spéciale Wok N Roll',
+            en: 'A special Wok N Roll selection',
+        },
+    },
+
+    {
+        id: 'apero-box',
+        category: 'boxes',
+        image: '',
+        price: 70,
+        name: {
+            fr: 'Apéro Box',
+            en: 'Apéro Box',
+        },
+        description: {
+            fr: 'Une sélection idéale pour l’apéritif',
+            en: 'A selection made for aperitif',
+        },
+    },
+
+    {
+        id: 'all-salmon-mix-12',
+        category: 'all-salmon-mix',
+        image: '',
+        price: 39,
+        name: {
+            fr: 'Mix 12',
+            en: 'Mix 12',
+        },
+        description: {
+            fr: 'Une sélection de 12 pièces 100% saumon',
+            en: 'A selection of 12 pieces, 100% salmon',
+        },
+    },
+
+    {
+        id: 'all-salmon-mix-24',
+        category: 'all-salmon-mix',
+        image: '',
+        price: 70,
+        name: {
+            fr: 'Mix 24',
+            en: 'Mix 24',
+        },
+        description: {
+            fr: 'Une sélection de 24 pièces 100% saumon',
+            en: 'A selection of 24 pieces, 100% salmon',
+        },
+    },
+
+    {
+        id: 'crunchy-mix-12',
+        category: 'crunchy-mix',
+        image: '',
+        price: 35,
+        name: {
+            fr: 'Mix 12',
+            en: 'Mix 12',
+        },
+        description: {
+            fr: 'Une sélection de 12 pièces Crunchy',
+            en: 'A selection of 12 Crunchy pieces',
+        },
+    },
+
+    {
+        id: 'crunchy-mix-24',
+        category: 'crunchy-mix',
+        image: '',
+        price: 65,
+        name: {
+            fr: 'Mix 24',
+            en: 'Mix 24',
+        },
+        description: {
+            fr: 'Une sélection de 24 pièces Crunchy',
+            en: 'A selection of 24 Crunchy pieces',
+        },
+    },
+
+    {
+        id: 'crunchy-mix-32',
+        category: 'crunchy-mix',
+        image: '',
+        price: 79,
+        name: {
+            fr: 'Mix 32',
+            en: 'Mix 32',
+        },
+        description: {
+            fr: 'Une sélection de 32 pièces Crunchy',
+            en: 'A selection of 32 Crunchy pieces',
+        },
+    },
+
+    {
+        id: 'soda',
+        category: 'boisson',
+        image: '',
+        price: 3.5,
+        name: {
+            fr: 'Soda',
+            en: 'Soda',
+        },
+        description: {
+            fr: 'Soda',
+            en: 'Soda',
+        },
+    },
+
+    {
+        id: 'eau-minerale',
+        category: 'boisson',
+        image: '',
+        price: 2.5,
+        name: {
+            fr: 'Eau minérale',
+            en: 'Mineral water',
+        },
+        description: {
+            fr: 'Eau minérale 1L',
+            en: 'Mineral water 1L',
+        },
+    },
+
+    {
+        id: 'jus-de-saison',
+        category: 'boisson',
+        image: '',
+        price: 6,
+        name: {
+            fr: 'Jus de saison',
+            en: 'Seasonal juice',
+        },
+        description: {
+            fr: 'Jus de saison frais',
+            en: 'Fresh seasonal juice',
+        },
+    },
+
+    // ====================
+    // SUPPLÉMENTS
+    // ====================
+
+    {
+        id: 'sauce-soja',
+        category: 'supplements',
+        image: '',
+        price: 2,
+        name: {
+            fr: 'Sauce soja',
+            en: 'Soy sauce',
+        },
+        description: {
+            fr: 'Sauce soja',
+            en: 'Soy sauce',
+        },
+    },
+
+    {
+        id: 'sweet-chili-sauce',
+        category: 'supplements',
+        image: '',
+        price: 2,
+        name: {
+            fr: 'Sweet Chili Sauce',
+            en: 'Sweet Chili Sauce',
+        },
+        description: {
+            fr: 'Sauce chili douce',
+            en: 'Sweet chili sauce',
+        },
+    },
+
+    {
+        id: 'sauce-yakitori',
+        category: 'supplements',
+        image: '',
+        price: 2,
+        name: {
+            fr: 'Sauce Yakitori',
+            en: 'Yakitori Sauce',
+        },
+        description: {
+            fr: 'Sauce Yakitori',
+            en: 'Yakitori sauce',
+        },
+    },
+
+    {
+        id: 'sauce-sriracha',
+        category: 'supplements',
+        image: '',
+        price: 2,
+        name: {
+            fr: 'Sauce Sriracha',
+            en: 'Sriracha Sauce',
+        },
+        description: {
+            fr: 'Sauce piquante Sriracha',
+            en: 'Spicy Sriracha sauce',
+        },
+    },
+
+    {
+        id: 'oignon-frit',
+        category: 'supplements',
+        image: '',
+        price: 1.5,
+        name: {
+            fr: 'Oignon frit',
+            en: 'Fried onion',
+        },
+        description: {
+            fr: 'Oignon frit croustillant',
+            en: 'Crispy fried onion',
+        },
+    },
+
+    {
+        id: 'noix-de-cajou',
+        category: 'supplements',
+        image: '',
+        price: 4,
+        name: {
+            fr: 'Noix de cajou',
+            en: 'Cashew nuts',
+        },
+        description: {
+            fr: 'Noix de cajou',
+            en: 'Cashew nuts',
+        },
+    },
+
+    {
+        id: 'champignon-noir',
+        category: 'supplements',
+        image: '',
+        price: 4.5,
+        name: {
+            fr: 'Champignon noir',
+            en: 'Black mushroom',
+        },
+        description: {
+            fr: 'Champignon noir',
+            en: 'Black mushroom',
+        },
+    },
+
+    {
+        id: 'champignon-shiitake',
+        category: 'supplements',
+        image: '',
+        price: 4.5,
+        name: {
+            fr: 'Champignon Shiitake',
+            en: 'Shiitake mushroom',
+        },
+        description: {
+            fr: 'Champignon Shiitake',
+            en: 'Shiitake mushroom',
+        },
+    },
+
+    {
+        id: 'supplement-poulet',
+        category: 'supplements',
+        image: '',
+        price: 6.5,
+        name: {
+            fr: 'Poulet',
+            en: 'Chicken',
+        },
+        description: {
+            fr: 'Supplément poulet',
+            en: 'Chicken extra',
+        },
+    },
+
+    {
+        id: 'supplement-boeuf',
+        category: 'supplements',
+        image: '',
+        price: 8.5,
+        name: {
+            fr: 'Bœuf',
+            en: 'Beef',
+        },
+        description: {
+            fr: 'Supplément bœuf',
+            en: 'Beef extra',
+        },
+    },
+
+    {
+        id: 'supplement-crevettes',
+        category: 'supplements',
+        image: '',
+        price: 9.5,
+        name: {
+            fr: 'Crevettes',
+            en: 'Shrimp',
+        },
+        description: {
+            fr: 'Supplément crevettes',
+            en: 'Shrimp extra',
+        },
+    },
+
+    {
+        id: 'riz-vinaigre',
+        category: 'supplements',
+        image: '',
+        price: 9.5,
+        name: {
+            fr: 'Riz vinaigré',
+            en: 'Sushi rice',
+        },
+        description: {
+            fr: 'Riz vinaigré',
+            en: 'Seasoned sushi rice',
+        },
+    },
+
+    {
+        id: 'jasmin-rice',
+        category: 'supplements',
+        image: '',
+        price: 4.5,
+        name: {
+            fr: 'Jasmin Rice',
+            en: 'Jasmine Rice',
+        },
+        description: {
+            fr: 'Riz jasmin',
+            en: 'Jasmine rice',
+        },
+    },
+
+    {
+        id: 'supplement-ananas',
+        category: 'supplements',
+        image: '',
+        price: 4,
+        name: {
+            fr: 'Ananas',
+            en: 'Pineapple',
+        },
+        description: {
+            fr: 'Supplément ananas',
+            en: 'Pineapple extra',
         },
     },
 ]

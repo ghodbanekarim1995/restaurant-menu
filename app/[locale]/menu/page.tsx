@@ -28,10 +28,24 @@ const translations = {
         noodles: 'Nouilles',
         friedRice: 'Riz sauté',
         wok: 'Wok',
-        sushi: 'Sushi',
+        nigiri: 'Nigiri',
+        sashimi: 'Sashimi',
+        hosomaki: 'Hosomaki',
+        futomaki: 'Futomaki',
+        crunchy: 'Crunchy',
+        chefRoll: 'Rouleau du chef',
+        hotRoll: 'Hot Roll',
+        sushiBurger: 'Sushi Burger',
+        pokeBurger: 'Poke Burger',
         viewDish: 'Voir le plat',
         currency: 'DT',
         imageComingSoon: 'Photo bientôt disponible',
+        boxes: 'Boxes',
+        allSalmonMix: 'All Salmon Mix',
+        crunchyMix: 'Crunchy Mix',
+        boisson: 'Boissons',
+        supplements: 'Suppléments',
+
     },
 
     en: {
@@ -45,10 +59,24 @@ const translations = {
         noodles: 'Noodles',
         friedRice: 'Fried Rice',
         wok: 'Wok',
-        sushi: 'Sushi',
+        nigiri: 'Nigiri',
+        sashimi: 'Sashimi',
+        hosomaki: 'Hosomaki',
+        futomaki: 'Futomaki',
+        crunchy: 'Crunchy',
+        chefRoll: "Chef's Roll",
+        hotRoll: 'Hot Roll',
+        sushiBurger: 'Sushi Burger',
+        pokeBurger: 'Poke Burger',
         viewDish: 'View dish',
         currency: 'DT',
         imageComingSoon: 'Photo coming soon',
+        boxes: 'Boxes',
+        allSalmonMix: 'All Salmon Mix',
+        crunchyMix: 'Crunchy Mix',
+        boisson: 'Drinks',
+        supplements: 'Extras',
+
     },
 }
 
@@ -103,8 +131,7 @@ function RevealCard({
         <Link
             ref={ref}
             href={href}
-            className={`${className} ${visible ? styles.visible : ''
-                }`}
+            className={`${className} ${visible ? styles.visible : ''}`}
             style={{
                 transitionDelay: visible
                     ? `${delay}ms`
@@ -164,6 +191,35 @@ function DishImage({
 }
 
 /* =====================================
+   CATEGORY BUTTON
+===================================== */
+
+function CategoryButton({
+    category,
+    label,
+    activeCategory,
+    onClick,
+}: {
+    category: 'all' | MenuCategory
+    label: string
+    activeCategory: 'all' | MenuCategory
+    onClick: () => void
+}) {
+    return (
+        <button
+            type="button"
+            className={`${styles.categoryButton} ${activeCategory === category
+                ? styles.active
+                : ''
+                }`}
+            onClick={onClick}
+        >
+            {label}
+        </button>
+    )
+}
+
+/* =====================================
    MENU PAGE
 ===================================== */
 
@@ -199,12 +255,11 @@ export default function MenuPage() {
             dir="ltr"
         >
             {/* =====================================
-          HEADER
-      ===================================== */}
+                HEADER
+            ===================================== */}
 
             <header className={styles.header}>
                 <div className={styles.headerInner}>
-
                     <Link
                         href={`/${locale}`}
                         className={styles.logoWrapper}
@@ -220,7 +275,6 @@ export default function MenuPage() {
                     </Link>
 
                     <div className={styles.headerText}>
-
                         <span>
                             WOK N ROLL
                         </span>
@@ -232,125 +286,178 @@ export default function MenuPage() {
                         <p>
                             {t.subtitle}
                         </p>
-
                     </div>
-
                 </div>
             </header>
 
             {/* =====================================
-          CATEGORY FILTER
-      ===================================== */}
+                CATEGORY FILTER
+            ===================================== */}
 
             <section className={styles.categorySection}>
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'all'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="all"
+                    label={t.all}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('all')}
-                >
-                    {t.all}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'starters'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="starters"
+                    label={t.starters}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('starters')}
-                >
-                    {t.starters}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'soups'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="soups"
+                    label={t.soups}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('soups')}
-                >
-                    {t.soups}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'skewers'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="skewers"
+                    label={t.skewers}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('skewers')}
-                >
-                    {t.skewers}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'salads'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="salads"
+                    label={t.salads}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('salads')}
-                >
-                    {t.salads}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'noodles'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="noodles"
+                    label={t.noodles}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('noodles')}
-                >
-                    {t.noodles}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'fried-rice'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="fried-rice"
+                    label={t.friedRice}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('fried-rice')}
-                >
-                    {t.friedRice}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'wok'
-                            ? styles.active
-                            : ''
-                        }`}
+                <CategoryButton
+                    category="wok"
+                    label={t.wok}
+                    activeCategory={activeCategory}
                     onClick={() => setActiveCategory('wok')}
-                >
-                    {t.wok}
-                </button>
+                />
 
-                <button
-                    type="button"
-                    className={`${styles.categoryButton} ${activeCategory === 'sushi'
-                            ? styles.active
-                            : ''
-                        }`}
-                    onClick={() => setActiveCategory('sushi')}
-                >
-                    {t.sushi}
-                </button>
+                <CategoryButton
+                    category="nigiri"
+                    label={t.nigiri}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('nigiri')}
+                />
+
+                <CategoryButton
+                    category="sashimi"
+                    label={t.sashimi}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('sashimi')}
+                />
+
+                <CategoryButton
+                    category="hosomaki"
+                    label={t.hosomaki}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('hosomaki')}
+                />
+
+                <CategoryButton
+                    category="futomaki"
+                    label={t.futomaki}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('futomaki')}
+                />
+
+                <CategoryButton
+                    category="crunchy"
+                    label={t.crunchy}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('crunchy')}
+                />
+
+                <CategoryButton
+                    category="chef-roll"
+                    label={t.chefRoll}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('chef-roll')}
+                />
+
+                <CategoryButton
+                    category="hot-roll"
+                    label={t.hotRoll}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('hot-roll')}
+                />
+
+                <CategoryButton
+                    category="sushi-burger"
+                    label={t.sushiBurger}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('sushi-burger')}
+                />
+
+                <CategoryButton
+                    category="poke-burger"
+                    label={t.pokeBurger}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('poke-burger')}
+
+                />
+
+                <CategoryButton
+                    category="boxes"
+                    label={t.boxes}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('boxes')}
+                />
+
+                <CategoryButton
+                    category="all-salmon-mix"
+                    label={t.allSalmonMix}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('all-salmon-mix')}
+                />
+
+                <CategoryButton
+                    category="crunchy-mix"
+                    label={t.crunchyMix}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('crunchy-mix')}
+                />
+
+                <CategoryButton
+                    category="boisson"
+                    label={t.boisson}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('boisson')}
+                />
+
+                <CategoryButton
+                    category="supplements"
+                    label={t.supplements}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('supplements')}
+                />
 
             </section>
 
             {/* =====================================
-          MENU
-      ===================================== */}
+                MENU
+            ===================================== */}
 
             <section className={styles.menuContainer}>
-
                 <div className={styles.menuGrid}>
 
                     {filteredItems.map((item, index) => (
@@ -360,43 +467,40 @@ export default function MenuPage() {
                             className={styles.dishCard}
                             delay={index * 70}
                         >
-
-                            {/* =================================
-                  IMAGE
-              ================================= */}
+                            {/* IMAGE */}
 
                             <div className={styles.imageWrapper}>
-
                                 <DishImage
                                     src={item.image}
                                     alt={item.name[locale]}
-                                    placeholderText={t.imageComingSoon}
+                                    placeholderText={
+                                        t.imageComingSoon
+                                    }
                                 />
 
-                                {/* OVERLAY */}
-
-                                <div className={styles.imageOverlay}>
-
+                                <div
+                                    className={
+                                        styles.imageOverlay
+                                    }
+                                >
                                     <span>
                                         {t.viewDish}
                                     </span>
 
-                                    <div className={styles.arrow}>
+                                    <div
+                                        className={
+                                            styles.arrow
+                                        }
+                                    >
                                         →
                                     </div>
-
                                 </div>
-
                             </div>
 
-                            {/* =================================
-                  CONTENT
-              ================================= */}
+                            {/* CONTENT */}
 
                             <div className={styles.dishContent}>
-
                                 <div className={styles.dishTop}>
-
                                     <h2>
                                         {item.name[locale]}
                                     </h2>
@@ -406,28 +510,23 @@ export default function MenuPage() {
                                     >
                                         {item.price} {t.currency}
                                     </span>
-
                                 </div>
 
                                 <p>
                                     {item.description[locale]}
                                 </p>
-
                             </div>
-
                         </RevealCard>
                     ))}
 
                 </div>
-
             </section>
 
             {/* =====================================
-          FOOTER
-      ===================================== */}
+                FOOTER
+            ===================================== */}
 
             <footer className={styles.footer}>
-
                 <div className={styles.footerLine} />
 
                 <span>
@@ -437,7 +536,6 @@ export default function MenuPage() {
                 <small>
                     ASIAN RESTAURANT
                 </small>
-
             </footer>
 
         </main>
