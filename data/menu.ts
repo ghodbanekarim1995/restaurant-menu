@@ -10,6 +10,7 @@ export type MenuCategory =
     | 'sashimi'
     | 'hosomaki'
     | 'futomaki'
+    | 'california'
     | 'crunchy'
     | 'chef-roll'
     | 'hot-roll'
@@ -1256,6 +1257,142 @@ export const menuItems: MenuItem[] = [
         },
     },
 
+
+    {
+        id: 'california-fresh',
+        category: 'california',
+        image: '',
+        price: 23,
+        name: {
+            fr: 'Fresh',
+            en: 'Fresh',
+        },
+        description: {
+            fr: 'Saumon, avocat, concombre',
+            en: 'Salmon, avocado, cucumber',
+        },
+    },
+
+    {
+        id: 'california-spicy-shrimp',
+        category: 'california',
+        image: '',
+        price: 23,
+        name: {
+            fr: 'Spicy Shrimp',
+            en: 'Spicy Shrimp',
+        },
+        description: {
+            fr: 'Crevettes, avocat, concombre, mayonnaise épicée, shishimi',
+            en: 'Shrimp, avocado, cucumber, spicy mayonnaise, shishimi',
+        },
+    },
+
+    {
+        id: 'california-vegan',
+        category: 'california',
+        image: '',
+        price: 19,
+        name: {
+            fr: 'Vegan',
+            en: 'Vegan',
+        },
+        description: {
+            fr: 'Laitue, avocat, concombre, carotte, ananas, aneth',
+            en: 'Lettuce, avocado, cucumber, carrot, pineapple, dill',
+        },
+    },
+
+    {
+        id: 'california-atlantique',
+        category: 'california',
+        image: '',
+        price: 24,
+        name: {
+            fr: 'Atlantique',
+            en: 'Atlantic',
+        },
+        description: {
+            fr: 'Saumon fumé, avocat, menthe, fromage, aneth',
+            en: 'Smoked salmon, avocado, mint, cheese, dill',
+        },
+    },
+
+    {
+        id: 'california-tuna-roll',
+        category: 'california',
+        image: '',
+        price: 21,
+        name: {
+            fr: 'Tuna Roll',
+            en: 'Tuna Roll',
+        },
+        description: {
+            fr: 'Thon épicé, avocat, concombre, carotte, shishimi',
+            en: 'Spicy tuna, avocado, cucumber, carrot, shishimi',
+        },
+    },
+
+    {
+        id: 'california-sweet-ebi',
+        category: 'california',
+        image: '',
+        price: 23,
+        name: {
+            fr: 'Sweet Ebi',
+            en: 'Sweet Ebi',
+        },
+        description: {
+            fr: 'Crevettes tempura, avocat, concombre, ananas, sauce teriyaki',
+            en: 'Tempura shrimp, avocado, cucumber, pineapple, teriyaki sauce',
+        },
+    },
+
+    {
+        id: 'california-spicy-salmon',
+        category: 'california',
+        image: '',
+        price: 23,
+        name: {
+            fr: 'Spicy Salmon',
+            en: 'Spicy Salmon',
+        },
+        description: {
+            fr: 'Saumon, avocat, concombre, shishimi',
+            en: 'Salmon, avocado, cucumber, shishimi',
+        },
+    },
+
+    {
+        id: 'california-saumon-tempura',
+        category: 'california',
+        image: '',
+        price: 23,
+        name: {
+            fr: 'Saumon Tempura',
+            en: 'Tempura Salmon',
+        },
+        description: {
+            fr: 'Saumon tempura, concombre, fromage',
+            en: 'Tempura salmon, cucumber, cheese',
+        },
+    },
+
+    {
+        id: 'california-crabe',
+        category: 'california',
+        image: '',
+        price: 20,
+        name: {
+            fr: 'Crabe',
+            en: 'Crab',
+        },
+        description: {
+            fr: 'Surimi de crabe tempura, avocat, fromage',
+            en: 'Tempura crab surimi, avocado, cheese',
+        },
+    },
+
     // =====================================================
     // CRUNCHY
     // =====================================================
@@ -2136,4 +2273,6 @@ export const menuItems: MenuItem[] = [
             en: 'Pineapple extra',
         },
     },
+
+
 ]

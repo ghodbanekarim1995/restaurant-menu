@@ -45,6 +45,7 @@ const translations = {
         crunchyMix: 'Crunchy Mix',
         boisson: 'Boissons',
         supplements: 'Suppléments',
+        california: 'California',
 
     },
 
@@ -76,6 +77,7 @@ const translations = {
         crunchyMix: 'Crunchy Mix',
         boisson: 'Drinks',
         supplements: 'Extras',
+        california: 'California',
 
     },
 }
@@ -388,6 +390,12 @@ export default function MenuPage() {
                 />
 
                 <CategoryButton
+                    category="california"
+                    label={t.california}
+                    activeCategory={activeCategory}
+                    onClick={() => setActiveCategory('california')}
+                />
+                <CategoryButton
                     category="chef-roll"
                     label={t.chefRoll}
                     activeCategory={activeCategory}
@@ -450,6 +458,7 @@ export default function MenuPage() {
                     activeCategory={activeCategory}
                     onClick={() => setActiveCategory('supplements')}
                 />
+
 
             </section>
 
