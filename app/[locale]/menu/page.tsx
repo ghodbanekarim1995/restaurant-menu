@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, useSearchParams } from 'next/navigation'
 import {
     useEffect,
     useRef,
@@ -227,7 +227,7 @@ function CategoryButton({
 
 export default function MenuPage() {
     const params = useParams()
-
+    const searchParams = useSearchParams()
     const locale: Locale =
         typeof params.locale === 'string' &&
             ['fr', 'en'].includes(params.locale)
@@ -240,9 +240,39 @@ export default function MenuPage() {
        CATEGORY FILTER
     ===================================== */
 
-    const [activeCategory, setActiveCategory] = useState<
-        'all' | MenuCategory
-    >('all')
+    const categoryFromUrl = searchParams.get('category')
+
+    const initialCategory: 'all' | MenuCategory =
+        categoryFromUrl &&
+            [
+                'starters',
+                'soups',
+                'skewers',
+                'salads',
+                'noodles',
+                'fried-rice',
+                'wok',
+                'nigiri',
+                'sashimi',
+                'hosomaki',
+                'futomaki',
+                'crunchy',
+                'california',
+                'chef-roll',
+                'hot-roll',
+                'sushi-burger',
+                'poke-burger',
+                'boxes',
+                'all-salmon-mix',
+                'crunchy-mix',
+                'boisson',
+                'supplements',
+            ].includes(categoryFromUrl)
+            ? (categoryFromUrl as MenuCategory)
+            : 'all'
+
+    const [activeCategory, setActiveCategory] =
+        useState<'all' | MenuCategory>(initialCategory)
 
     const filteredItems =
         activeCategory === 'all'
@@ -472,8 +502,11 @@ export default function MenuPage() {
                     {filteredItems.map((item, index) => (
                         <RevealCard
                             key={item.id}
-                            href={`/${locale}/menu/${item.id}`}
-                            className={styles.dishCard}
+                            href={
+                                activeCategory === 'all'
+                                    ? `/${locale}/menu/${item.id}`
+                                    : `/${locale}/menu/${item.id}?category=${activeCategory}`
+                            } className={styles.dishCard}
                             delay={index * 70}
                         >
                             {/* IMAGE */}

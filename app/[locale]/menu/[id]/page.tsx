@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, useSearchParams } from 'next/navigation'
 
 import { menuItems } from '@/data/menu'
 
@@ -28,10 +28,11 @@ const translations = {
 
 export default function DishPage() {
   const params = useParams()
-
+  const searchParams = useSearchParams()
+  const category = searchParams.get('category')
   const locale: Locale =
     typeof params.locale === 'string' &&
-    ['fr', 'en'].includes(params.locale)
+      ['fr', 'en'].includes(params.locale)
       ? (params.locale as Locale)
       : 'fr'
 
@@ -70,9 +71,12 @@ export default function DishPage() {
       ===================================== */}
 
       <div className={styles.topBar}>
-
         <Link
-          href={`/${locale}/menu`}
+          href={
+            category
+              ? `/${locale}/menu?category=${category}`
+              : `/${locale}/menu`
+          }
           className={styles.backButton}
         >
           <span>←</span>
