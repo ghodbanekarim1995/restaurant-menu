@@ -1069,7 +1069,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hosomaki-saumon',
         category: 'hosomaki',
-        image: '/hosomaki.jpg',
+        image: '/hosomaki-saumon.png',
         price: 14.5,
 
         name: {
@@ -1086,7 +1086,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hosomaki-crevettes-tempura',
         category: 'hosomaki',
-        image: '/hosomaki.jpg',
+        image: '/hosomaki-crevettes-tempura.png',
         price: 14.5,
 
         name: {
@@ -1103,7 +1103,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hosomaki-thon',
         category: 'hosomaki',
-        image: '/hosomaki.jpg',
+        image: '/hosomaki-thon.png',
         price: 13,
 
         name: {
@@ -1120,7 +1120,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hosomaki-concombre-fromage',
         category: 'hosomaki',
-        image: '/hosomaki.jpg',
+        image: '/hosomaki-concombre-fromage.png',
         price: 10,
 
         name: {
@@ -1137,7 +1137,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hosomaki-avocat-fromage',
         category: 'hosomaki',
-        image: '/hosomaki.jpg',
+        image: '/hosomaki-avocat-fromage.png',
         price: 12,
 
         name: {
@@ -1154,7 +1154,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hosomaki-crabe-pane',
         category: 'hosomaki',
-        image: '/hosomaki.jpg',
+        image: '/hosomaki-crabe-pane.png',
         price: 11,
 
         name: {
@@ -1175,7 +1175,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'futomaki-f1',
         category: 'futomaki',
-        image: '/futomaki.jpg',
+        image: '/futomaki-f1.png',
         price: 17,
 
         name: {
@@ -1192,7 +1192,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'futomaki-f2',
         category: 'futomaki',
-        image: '/futomaki.jpg',
+        image: '/futomaki-f2.png',
         price: 15.5,
 
         name: {
@@ -1209,7 +1209,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'futomaki-f3',
         category: 'futomaki',
-        image: '/futomaki.jpg',
+        image: '/futomaki-f3.png',
         price: 18.5,
 
         name: {
@@ -1226,7 +1226,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'futomaki-f4',
         category: 'futomaki',
-        image: '/futomaki.jpg',
+        image: '/futomaki-f4.png',
         price: 17,
 
         name: {
@@ -1243,7 +1243,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'futomaki-f5',
         category: 'futomaki',
-        image: '/futomaki.jpg',
+        image: '/futomaki-f5.png',
         price: 18,
 
         name: {
@@ -1261,7 +1261,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-fresh',
         category: 'california',
-        image: '',
+        image: '/california-fresh.png',
         price: 23,
         name: {
             fr: 'Fresh',
@@ -1276,7 +1276,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-spicy-shrimp',
         category: 'california',
-        image: '',
+        image: '/california-spicy-shrimp.png',
         price: 23,
         name: {
             fr: 'Spicy Shrimp',
@@ -1291,7 +1291,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-vegan',
         category: 'california',
-        image: '',
+        image: '/california-vegan.png',
         price: 19,
         name: {
             fr: 'Vegan',
@@ -1321,7 +1321,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-tuna-roll',
         category: 'california',
-        image: '',
+        image: '/california-tuna-roll.png',
         price: 21,
         name: {
             fr: 'Tuna Roll',
@@ -1336,7 +1336,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-sweet-ebi',
         category: 'california',
-        image: '',
+        image: '/california-sweet-ebi.png',
         price: 23,
         name: {
             fr: 'Sweet Ebi',
@@ -1351,7 +1351,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-spicy-salmon',
         category: 'california',
-        image: '',
+        image: '/california-spicy-salmon.png',
         price: 23,
         name: {
             fr: 'Spicy Salmon',
@@ -1366,7 +1366,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-saumon-tempura',
         category: 'california',
-        image: '',
+        image: '/california-saumon-tempura.png',
         price: 23,
         name: {
             fr: 'Saumon Tempura',
@@ -1381,7 +1381,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'california-crabe',
         category: 'california',
-        image: '',
+        image: '/california-crabe.png',
         price: 20,
         name: {
             fr: 'Crabe',
@@ -1400,7 +1400,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-chicken-roll',
         category: 'crunchy',
-        image: '',
+        image: '/crunchy-chicken-roll.png',
         price: 21,
 
         name: {
@@ -1417,7 +1417,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-ebi-maki',
         category: 'crunchy',
-        image: '',
+        image: '/crunchy-ebi-maki.png',
         price: 24,
 
         name: {
@@ -1434,7 +1434,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'crunchy-salmon-roll',
         category: 'crunchy',
-        image: '',
+        image: '/crunchy-salmon-roll.png',
         price: 25,
 
         name: {
@@ -1523,7 +1523,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'shake-yaki',
         category: 'chef-roll',
-        image: '',
+        image: '/shake-yaki.png',
         price: 33,
 
         name: {
@@ -1540,7 +1540,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'green-dragon',
         category: 'chef-roll',
-        image: '',
+        image: '/green-dragon.png',
         price: 32,
 
         name: {
@@ -1557,7 +1557,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'red-dragon',
         category: 'chef-roll',
-        image: '',
+        image: '/red-dragon.png',
         price: 30,
 
         name: {
@@ -1574,7 +1574,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'hot-and-cold',
         category: 'chef-roll',
-        image: '',
+        image: '/hot-and-cold.png',
         price: 33,
 
         name: {
@@ -1591,7 +1591,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'rainbow',
         category: 'chef-roll',
-        image: '',
+        image: '/rainbow.png',
         price: 33,
 
         name: {
@@ -1625,7 +1625,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'fuji',
         category: 'chef-roll',
-        image: '',
+        image: '/fuji.png',
         price: 31,
 
         name: {
@@ -1642,7 +1642,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'tokyo-roll',
         category: 'chef-roll',
-        image: '',
+        image: '/tokyo-roll.png',
         price: 30,
 
         name: {
