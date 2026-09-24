@@ -65,7 +65,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nems-poulet',
         category: 'starters',
-        image: '/nems.jpg',
+        image: '/nems-poulet.jpg',
         price: 9.5,
 
         name: {
@@ -82,7 +82,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'nems-crevettes',
         category: 'starters',
-        image: '/nems.jpg',
+        image: '/nems-poulet.jpg',
         price: 11,
 
         name: {
@@ -256,7 +256,7 @@ export const menuItems: MenuItem[] = [
     {
         id: 'tom-yam-soupe',
         category: 'soups',
-        image: '/tom-yam.jpg',
+        image: '',
         price: 14,
 
         name: {
