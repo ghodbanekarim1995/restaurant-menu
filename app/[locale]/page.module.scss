@@ -112,53 +112,68 @@
 }
 
 /* ========================================
-   ANIMATED SLOGAN
+   SLOGAN TICKER
 ======================================== */
 
-.slogan {
+.sloganTicker {
   position: relative;
-
   width: 100%;
-  max-width: 750px;
-
-  min-height: 42px;
-
-  margin: 2px auto 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
+  max-width: 760px;
+  margin: 20px auto 30px;
 
   overflow: hidden;
+
+  /* léger fondu sur les côtés */
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent);
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent);
 }
 
-.sloganItem {
-  position: absolute;
+.sloganTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
 
-  width: 100%;
-
-  padding: 0 20px;
-
-  box-sizing: border-box;
+  white-space: nowrap;
 
   color: #f15a24;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 
-  font-size: 22px;
+  animation: ticker 28s linear infinite;
+}
 
-  font-weight: 800;
+.sloganTrack span {
+  flex-shrink: 0;
+  margin: 0 16px;
+}
 
-  letter-spacing: 0.4px;
+.sloganTrack span:nth-child(even) {
+  color: rgba(241, 90, 36, 0.5);
+  font-size: 11px;
+}
 
-  line-height: 1.35;
 
-  opacity: 0;
+/* ========================================
+   TICKER ANIMATION
+======================================== */
 
-  transform: translateY(12px) scale(0.98);
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
 
-  animation:
-    sloganFade 12s ease-in-out infinite;
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes sloganFade {
@@ -880,6 +895,25 @@ a.restaurantInfoItem:hover {
     padding: 20px 11px 20px;
 
     box-sizing: border-box;
+  }
+
+  .sloganTicker {
+    width: 100%;
+    margin: 12px auto 22px;
+  }
+
+  .sloganTrack {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    animation-duration: 22s;
+  }
+
+  .sloganTrack span {
+    margin: 0 10px;
+  }
+
+  .sloganTrack span:nth-child(even) {
+    font-size: 9px;
   }
 
   /* ========================================

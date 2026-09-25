@@ -165,9 +165,25 @@ export default function LandingPage() {
             <span>{t.titleAccent}</span>
           </h1>
 
-          <p className={styles.description}>
-            {t.description}
-          </p>
+          <div className={styles.sloganTicker}>
+            <div className={styles.sloganTrack}>
+              <span>L ASIE S INVITE DANS VOTRE ASSIETTE.</span>
+              <span>•</span>
+              <span>WOK IT. ROLL IT. LOVE IT.</span>
+              <span>•</span>
+              <span>UNE EXPLOSION DE SAVEURS À CHAQUE BOUCHÉE.</span>
+              <span>•</span>
+
+              {/* Duplication pour assurer une boucle continue */}
+
+              <span>L ASIE S INVITE DANS VOTRE ASSIETTE.</span>
+              <span>•</span>
+              <span>WOK IT. ROLL IT. LOVE IT.</span>
+              <span>•</span>
+              <span>UNE EXPLOSION DE SAVEURS À CHAQUE BOUCHÉE.</span>
+              <span>•</span>
+            </div>
+          </div>
 
           {/* LANGUAGES */}
           <div className={styles.languages}>
