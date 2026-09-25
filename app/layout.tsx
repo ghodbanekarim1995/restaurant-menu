@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wok Time",
-  description: "Découvrez le menu de Wok Time",
+  title: "Wok N Roll",
+  description: "Découvrez le menu de Wok N Roll",
 };
 
 export default function RootLayout({
