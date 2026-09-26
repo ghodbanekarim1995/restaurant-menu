@@ -808,7 +808,7 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Rruit de mer(crevettes crabe et seiche)sur un lit de riz sautés servi avec un œuf.',
+            fr: 'Fruit de mer(crevettes crabe et seiche)sur un lit de riz sautés servi avec un œuf.',
             en: 'Seafood (shrimp, crab, and squid) served on a bed of stir-fried rice, accompanied by an egg.',
         },
     },
