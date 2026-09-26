@@ -1,0 +1,989 @@
+.page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background: #ffffff;
+  color: #171717;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1000px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 25px 0 35px;
+}
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.orangeBrush {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 280px;
+  height: 85px;
+
+  background: #f15a24;
+
+  clip-path: polygon(
+    25% 0,
+    100% 0,
+    100% 100%,
+    84% 84%,
+    68% 100%,
+    49% 76%,
+    30% 92%,
+    0 62%
+  );
+
+  opacity: 0.95;
+}
+
+.wavePatternLeft,
+.wavePatternRight {
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  opacity: 0.07;
+
+  background-image:
+    radial-gradient(
+      ellipse at center,
+      transparent 45%,
+      #f15a24 46%,
+      #f15a24 50%,
+      transparent 51%
+    );
+
+  background-size: 65px 48px;
+
+  pointer-events: none;
+}
+
+.wavePatternLeft {
+  left: -90px;
+  top: 180px;
+
+  transform: rotate(-20deg);
+}
+
+.wavePatternRight {
+  right: -100px;
+  bottom: 100px;
+
+  transform: rotate(20deg);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 15px;
+
+  border: 1px solid rgba(241, 90, 36, 0.2);
+  border-radius: 999px;
+
+  background: #fffaf3;
+
+  color: #f15a24;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.backButton:hover {
+  background: #fff1e5;
+  transform: translateX(-2px);
+}
+
+.logoText {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  color: #171717;
+}
+
+.logoText b {
+  color: #f15a24;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  text-align: center;
+
+  margin: 25px auto 35px;
+}
+
+.heroIcon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 12px;
+
+  border-radius: 50%;
+
+  background: #fff4e8;
+
+  font-size: 25px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  color: #242424;
+
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.1;
+
+  font-weight: 900;
+}
+
+.hero p {
+  max-width: 600px;
+
+  margin: 12px auto 0;
+
+  color: #777;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   GAMES GRID
+======================================== */
+
+.gamesGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.gameCard {
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 28px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(241, 90, 36, 0.18);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf3 0%,
+      #fff4e8 100%
+    );
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  box-shadow:
+    0 15px 40px rgba(37, 24, 15, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.gameCard:hover {
+  transform: translateY(-6px);
+
+  border-color: #f15a24;
+
+  box-shadow:
+    0 20px 45px rgba(241, 90, 36, 0.14);
+}
+
+.gameIcon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.08);
+
+  font-size: 34px;
+}
+
+.gameCard h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.gameCard p {
+  min-height: 42px;
+
+  margin: 8px 0 17px;
+
+  color: #777;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 16px;
+
+  border-radius: 999px;
+
+  background: #f15a24;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.playButton span {
+  font-size: 15px;
+}
+
+/* ========================================
+   GAME PANEL
+======================================== */
+
+.gamePanel {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  padding: 25px;
+
+  border: 1px solid rgba(241, 90, 36, 0.18);
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf3 0%,
+      #fff4e8 100%
+    );
+
+  box-shadow:
+    0 20px 60px rgba(37, 24, 15, 0.08);
+
+  text-align: center;
+}
+
+.backToGames {
+  display: block;
+
+  margin-bottom: 15px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #f15a24;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.gameHeader {
+  text-align: center;
+}
+
+.bigGameIcon {
+  font-size: 35px;
+
+  margin-bottom: 5px;
+}
+
+.gameHeader h2 {
+  margin: 0;
+
+  color: #242424;
+
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.gameStats {
+  margin-top: 10px;
+
+  color: #f15a24;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ========================================
+   MEMORY
+======================================== */
+
+.memoryGrid {
+  width: min(430px, 100%);
+
+  margin: 25px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+.memoryCard {
+  position: relative;
+
+  aspect-ratio: 1;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 15px;
+
+  background: #f15a24;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.memoryCard:hover {
+  transform: translateY(-3px);
+}
+
+.memoryCardFlipped {
+  background: #ffffff;
+}
+
+.memoryCardMatched {
+  background: #fff0e5;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.cardBack {
+  opacity: 0;
+
+  transform: scale(0.5);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.memoryCardFlipped .cardBack {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+.memoryCardFlipped .cardFront {
+  opacity: 0;
+}
+
+.successMessage {
+  margin: 18px auto;
+
+  padding: 12px 18px;
+
+  border-radius: 12px;
+
+  background: rgba(241, 90, 36, 0.08);
+
+  color: #f15a24;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ========================================
+   TAP CHALLENGE
+======================================== */
+
+.tapStats {
+  display: flex;
+  justify-content: center;
+
+  gap: 35px;
+
+  margin: 18px 0;
+}
+
+.tapStats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.tapStats small {
+  color: #999;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.tapStats strong {
+  margin-top: 3px;
+
+  color: #f15a24;
+
+  font-size: 23px;
+}
+
+.tapStart {
+  padding: 25px 0;
+}
+
+.tapStart > div {
+  font-size: 45px;
+}
+
+.tapStart p {
+  color: #777;
+
+  font-size: 14px;
+}
+
+.tapStart h3 {
+  margin: 10px 0;
+
+  color: #242424;
+}
+
+.finalScore {
+  display: block;
+
+  color: #f15a24;
+
+  font-size: 55px;
+  font-weight: 900;
+}
+
+.tapButton {
+  width: min(280px, 80vw);
+  aspect-ratio: 1;
+
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 8px solid rgba(241, 90, 36, 0.15);
+  border-radius: 50%;
+
+  background: #f15a24;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 38px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 15px 35px rgba(241, 90, 36, 0.25);
+
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease;
+}
+
+.tapButton:active {
+  transform: scale(0.94);
+
+  box-shadow:
+    0 7px 18px rgba(241, 90, 36, 0.2);
+}
+
+/* ========================================
+   TIC TAC TOE
+======================================== */
+
+.turnText {
+  margin: 8px 0;
+
+  color: #f15a24;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ticBoard {
+  width: min(320px, 85vw);
+
+  margin: 25px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.ticCell {
+  aspect-ratio: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(241, 90, 36, 0.2);
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ticCell:hover:not(:disabled) {
+  background: #fff7f0;
+
+  transform: scale(1.03);
+}
+
+.ticCell:disabled {
+  cursor: default;
+}
+
+.ticCell span {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.playerX {
+  color: #f15a24;
+}
+
+.playerO {
+  color: #242424;
+}
+
+.ticLegend {
+  display: flex;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-bottom: 20px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+.ticLegend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ticLegend b {
+  font-size: 17px;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.primaryButton {
+  min-width: 150px;
+
+  padding: 12px 20px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: #f15a24;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primaryButton:hover {
+  background: #e84e18;
+
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 35px;
+
+  color: #999;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.footer i {
+  width: 30px;
+  height: 1px;
+
+  background: #f15a24;
+
+  opacity: 0.6;
+}
+
+/* ========================================
+   RTL
+======================================== */
+
+[dir='rtl'] .backButton:hover {
+  transform: translateX(2px);
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+  .gamesGrid {
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+  }
+
+  .gameCard {
+    min-height: 210px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+  .page {
+    min-height: 100dvh;
+
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 18px 14px 25px;
+  }
+
+  .orangeBrush {
+    width: 170px;
+    height: 60px;
+  }
+
+  .header {
+    margin-bottom: 15px;
+  }
+
+  .backButton {
+    padding: 8px 12px;
+
+    font-size: 10px;
+  }
+
+  .logoText {
+    font-size: 16px;
+  }
+
+  .hero {
+    margin: 20px auto 25px;
+  }
+
+  .heroIcon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 21px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+  .gamesGrid {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .gameCard {
+    width: 100%;
+    min-height: 170px;
+
+    box-sizing: border-box;
+
+    padding: 20px 18px;
+
+    border-radius: 20px;
+  }
+
+  .gameIcon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 10px;
+
+    font-size: 27px;
+  }
+
+  .gameCard h2 {
+    font-size: 19px;
+  }
+
+  .gameCard p {
+    min-height: auto;
+
+    margin: 5px 0 12px;
+
+    font-size: 11px;
+  }
+
+  .playButton {
+    padding: 8px 14px;
+
+    font-size: 10px;
+  }
+
+  .gamePanel {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 18px 14px;
+
+    border-radius: 22px;
+  }
+
+  .gameHeader h2 {
+    font-size: 24px;
+  }
+
+  .memoryGrid {
+    gap: 7px;
+
+    margin: 20px auto;
+  }
+
+  .memoryCard {
+    border-radius: 11px;
+  }
+
+  .cardFront,
+  .cardBack {
+    font-size: 21px;
+  }
+
+  .tapButton {
+    width: min(240px, 75vw);
+
+    font-size: 32px;
+  }
+
+  .ticBoard {
+    width: min(290px, 82vw);
+
+    gap: 6px;
+  }
+
+  .ticCell {
+    border-radius: 11px;
+  }
+
+  .ticCell span {
+    font-size: 32px;
+  }
+
+  .footer {
+    margin-top: 25px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 11px;
+  }
+
+  .gamePanel {
+    padding: 16px 10px;
+  }
+
+  .memoryGrid {
+    gap: 5px;
+  }
+
+  .cardFront,
+  .cardBack {
+    font-size: 18px;
+  }
+}

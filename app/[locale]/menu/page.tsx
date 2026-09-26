@@ -328,6 +328,13 @@ export default function MenuPage() {
 
             <section className={styles.categorySection}>
 
+                <Link
+                    href={`/${locale}/games`}
+                    className={styles.gamesButton}
+                >
+                    🎮 {locale === 'fr' ? 'Jeux' : 'Games'}
+                </Link>
+
                 <CategoryButton
                     category="all"
                     label={t.all}

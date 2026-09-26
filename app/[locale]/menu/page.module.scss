@@ -733,3 +733,31 @@
     opacity: 1;
   }
 }
+
+.gamesButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border: 1px solid rgba(241, 90, 36, 0.35);
+    border-radius: 999px;
+    background: #fffaf5;
+    color: #f15a24;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.gamesButton:hover {
+    background: #f4a386;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(241, 90, 36, 0.2);
+}
