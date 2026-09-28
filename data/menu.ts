@@ -304,6 +304,23 @@ export const menuItems: MenuItem[] = [
         },
     },
 
+        {
+        id: 'ramen vegan',
+        category: 'soups',
+        image: '',
+        price: 20,
+
+        name: {
+            fr: 'Ramen vegan',
+            en: 'Vegan Ramen',
+        },
+
+        description: {
+            fr: 'Œuf, champignons noirs et shiitake.',
+            en: 'Black Mushroom, Egg & Shiitake.',
+        },
+    },
+
     // =====================================================
     // BROCHETTES
     // =====================================================
@@ -1427,8 +1444,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Chicken Roll.',
-            en: 'Chicken Roll.',
+            fr: 'Poulet, avocat et cream cheese.',
+            en: 'Chicken, avocado and cream cheese.',
         },
     },
 
@@ -1444,8 +1461,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Ebi Maki.',
-            en: 'Ebi Maki.',
+            fr: 'Crevettes, avocat et cream cheese.',
+            en: 'Shrimp, avocado and cream cheese.',
         },
     },
 
@@ -1461,8 +1478,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Salmon Roll.',
-            en: 'Salmon Roll.',
+            fr: 'Saumon, avocat et mayonnaise épicée.',
+            en: 'Salmon, avocado and spicy mayonnaise.',
         },
     },
 
@@ -1495,8 +1512,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Crunchy Futomaki.',
-            en: 'Crunchy Futomaki.',
+            fr: 'Saumon, avocat et mayonnaise épicée.',
+            en: 'Salmon, avocado and spicy mayonnaise.',
         },
     },
 
@@ -1512,8 +1529,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Dragon Eye.',
-            en: 'Dragon Eye.',
+            fr: 'Futomaki saumon, crevettes, avocat et fromage.',
+            en: 'Salmon, shrimp, avocado and cheese futomaki.',
         },
     },
 
@@ -1550,8 +1567,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Shake Yaki.',
-            en: 'Shake Yaki.',
+            fr: 'Intérieur : saumon pané, avocat et concombre — Extérieur : saumon frais',
+            en: 'Inside: breaded salmon, avocado and cucumber — Outside: fresh salmon.',
         },
     },
 
@@ -1567,8 +1584,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Green Dragon.',
-            en: 'Green Dragon.',
+            fr: 'Intérieur : crevettes tempura, concombre, avocat et fromage — Extérieur : avocat.',
+            en: 'Inside: tempura shrimp, cucumber, avocado and cheese — Outside: avocado.',
         },
     },
 
@@ -1584,8 +1601,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Red Dragon.',
-            en: 'Red Dragon.',
+            fr: 'Intérieur : thon rouge cuit, avocat, concombre et mayonnaise épicée — Extérieur : thon frais.',
+            en: 'Inside: cooked red tuna, avocado, cucumber and spicy mayonnaise — Outside: fresh tuna.',
         },
     },
 
@@ -1601,8 +1618,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Hot & Cold.',
-            en: 'Hot & Cold.',
+            fr: 'Intérieur : crevettes, avocat et mayonnaise épicée — Extérieur : tartare de saumon.',
+            en: 'Inside: shrimp, avocado and spicy mayonnaise — Outside: salmon tartare.',
         },
     },
 
@@ -1618,8 +1635,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'À l’intérieur : surimi de crabe, tempura, avocat et fromage. À l’extérieur : saumon, crevette et avocat.',
-            en: 'Inside: crab surimi, tempura, avocado and cheese. Outside: salmon, shrimp and avocado.',
+            fr: 'Intérieur : surimi de crabe tempura, avocat et fromage — Extérieur : saumon, crevettes et avocat.',
+            en: 'Inside: tempura crab surimi, avocado and cheese — Outside: salmon, shrimp and avocado.',
         },
     },
 
@@ -1635,8 +1652,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'Iceberg.',
-            en: 'Iceberg.',
+            fr: 'Intérieur : surimi de crabe pané, avocat, concombre et mayonnaise épicée — Extérieur : mix de crabe.',
+            en: 'Inside: breaded crab surimi, avocado, cucumber and spicy mayonnaise — Outside: crab mix.',
         },
     },
 
@@ -1652,8 +1669,8 @@ export const menuItems: MenuItem[] = [
         },
 
         description: {
-            fr: 'À l’intérieur : crevettes tempura et avocat. À l’extérieur : surimi de crabe mixé et sauce Fuji.',
-            en: 'Inside: tempura shrimp and avocado. Outside: mixed crab surimi and Fuji sauce.',
+            fr: 'Intérieur : crevettes tempura et avocat — Extérieur : surimi de crabe, mix de sauce Fuji',
+            en: 'Inside: tempura shrimp and avocado — Outside: crab surimi, Fuji sauce mix',
         },
     },
 
