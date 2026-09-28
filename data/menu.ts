@@ -639,6 +639,23 @@ export const menuItems: MenuItem[] = [
         },
     },
 
+       {
+        id: 'nouilles-vegan',
+        category: 'noodles',
+        image: '',
+        price: 29,
+
+        name: {
+            fr: 'Nouilles véganes aux trois champignons',
+            en: 'Vegan Noodles with Three Mushrooms',
+        },
+
+        description: {
+            fr: 'Nouilles sautées au wok, accompagnées d’un savoureux mélange de trois champignons, de légumes croquants et d’une sauce asiatique parfumée. Un plat végétal, gourmand et plein de saveurs.',
+            en: 'Wok-fried noodles served with a delicious mix of three mushrooms, crisp vegetables and a fragrant Asian sauce. A wholesome, flavorful and satisfying plant-based dish.',
+        },
+    },
+
     {
         id: 'seafood-noodles',
         category: 'noodles',
